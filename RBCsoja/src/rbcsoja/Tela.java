@@ -195,6 +195,11 @@ public class Tela extends javax.swing.JFrame {
         jLabel35.setText("Escolha as Características referentes ao estado da soja");
 
         date.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro", "Unknown" }));
+        date.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateActionPerformed(evt);
+            }
+        });
 
         externalDecay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "firm-and-dry", "absent", "Desconhecido", "watery" }));
         externalDecay.addActionListener(new java.awt.event.ActionListener() {
@@ -744,7 +749,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getLeafspotMargin() {
         String casoProblema;
-        Object objeto= cankerLesion.getSelectedItem();
+        Object objeto= leafspotMargin.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -774,7 +779,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getCropHist() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= CropHist.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -784,10 +789,10 @@ public class Tela extends javax.swing.JFrame {
     }
 
     public String getDate() {
-        String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
+        String casoProblemaData;
+        Object objeto= date.getSelectedItem();
+        casoProblemaData = objeto.toString();
+        return casoProblemaData;
     }
 
     public void setDate(JComboBox<String> date) {
@@ -796,7 +801,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getGermination() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= germination.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -807,7 +812,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getLeafMalf() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= leafMalf.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -818,7 +823,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getLodging() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= lodging.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -829,7 +834,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getRoot() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= root.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -840,7 +845,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getSeverity() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= severity.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -851,7 +856,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getStemCanker() {
         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
+        Object objeto= stemCanker.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -900,9 +905,41 @@ public class Tela extends javax.swing.JFrame {
 
     private void CalcularSimilariedade(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularSimilariedade
         // TODO add your handling code here:
+        Dados.leaves = getLeaves();
+        Dados.data = getDate();
+        Dados.plantstand=getPlantStand();
+        Dados.precip=getPrecip();
+        Dados.temp= getTemps();
+        Dados.hail= getHail();
+        Dados.seedtmt = getSeetTmt();
+        Dados.plantgrowth= getPlantGrowth();
+        Dados.leafspothalo= getLeafspotHalo();
+        Dados.leafsspotmarg= getLeafspotMargin();
+        Dados.leafspotsize= getLeafspotSize();
+        Dados.leafshred= getLeafShread();
+        Dados.leafmild = getLeafMild();
+        Dados.stem = getStem();
+        Dados.canckerlesion= getCankerLesion();
+        Dados.fruitingbodies= getFruitingBodies();
+        Dados.externaldecay = getExternalDecay();
+        Dados.intdiscolor = getIntDiscolor();
+        Dados.sclerotia= getSclerotia();
+        Dados.fruitpods = getFruitingPods();
+        Dados.fruitspots = getFruitingPods();
+        Dados.seed= getSeeds();
+        Dados.moldgrowth=getMoldGrowth();
+        Dados.seeddis=getSeedDiscolor();
+        Dados.shriveling= getShriveling();
+        Dados.croohist=getCropHist();
+        Dados.areadamaged=getDamagedArea();
+        Dados.severity=getSeverity();
+        Dados.germination=getGermination();
+        Dados.lodgi = getLodging();
+        Dados.stemcancker= getStemCanker();
+        Dados.roots=getRoot();
         Tela2 nomeVariavel = new Tela2(); 
         nomeVariavel.setVisible(true); 
-        this.dispose();
+        
         
         
         
@@ -1004,9 +1041,13 @@ public class Tela extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mycelliumActionPerformed
 
+    private void dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateActionPerformed
+
     public String getMycellium() {
         String casoProblema;
-        Object objeto= shriveling.getSelectedItem();
+        Object objeto= mycellium.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -1127,7 +1168,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getLeafspotSize() {
         String casoProblema;
-        Object objeto= leafspotHalo.getSelectedItem();
+        Object objeto= leafspotSize.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }
@@ -1215,7 +1256,7 @@ public class Tela extends javax.swing.JFrame {
 
     public String getFruitingPods() {
         String casoProblema;
-        Object objeto= fruitingBodies.getSelectedItem();
+        Object objeto= fruitingPods.getSelectedItem();
         casoProblema = objeto.toString();
         return casoProblema;
     }

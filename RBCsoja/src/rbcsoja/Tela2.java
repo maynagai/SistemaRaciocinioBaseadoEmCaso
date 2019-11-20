@@ -16,42 +16,41 @@ public class Tela2 extends javax.swing.JFrame {
      */
     public Tela2() {
         initComponents();
-        Tela loc = new Tela();
-        System.out.println(loc.getDamagedArea());
-        jTextField1.setText(loc.getPlantStand());
-        jTextField2.setText(loc.getPrecip());
-        jTextField3.setText(loc.getTemps());
-        jTextField4.setText(loc.getHail());
-        jTextField5.setText(loc.getSeetTmt());
-        jTextField6.setText(loc.getPlantGrowth());
-        jTextField7.setText(loc.getLeafspotHalo());
-        jTextField8.setText(loc.getLeafspotMargin());
-        jTextField9.setText(loc.getLeaves());
-        jTextField10.setText(loc.getLeafspotSize());
-        jTextField11.setText(loc.getLeafShread());
-        jTextField12.setText(loc.getLeafMild());
-        jTextField13.setText(loc.getStem());
-        jTextField14.setText(loc.getCankerLesion());
-        jTextField15.setText(loc.getFruitingBodies());
-        jTextField16.setText(loc.getExternalDecay());
-        jTextField17.setText(loc.getIntDiscolor());
-        jTextField18.setText(loc.getSclerotia());
-        jTextField19.setText(loc.getFruitingPods());
-        jTextField20.setText(loc.getSeeds());
-        jTextField21.setText(loc.getMoldGrowth());
-        jTextField22.setText(loc.getSeedDiscolor());
-        jTextField23.setText(loc.getShriveling());
-        jTextField24.setText(loc.getDate());
-        jTextField25.setText(loc.getCropHist());
-        jTextField26.setText(loc.getDamagedArea());
-        jTextField27.setText(loc.getSeverity());
-        jTextField28.setText(loc.getGermination());
-        jTextField29.setText(loc.getLodging());
-        jTextField30.setText(loc.getStemCanker());
-        jTextField31.setText(loc.getRoot());
-        jTextField32.setText(loc.getMycellium());
-        jTextField33.setText(loc.getLeafMalf());
-        jTextField34.setText(loc.getSeedSize());
+        
+        jTextField1.setText(Dados.plantstand);
+        jTextField2.setText(Dados.precip);
+        jTextField3.setText(Dados.temp);
+        jTextField4.setText(Dados.hail);
+        jTextField5.setText(Dados.seedtmt);
+        jTextField6.setText(Dados.plantgrowth);
+        jTextField7.setText(Dados.leafspothalo);
+        jTextField8.setText(Dados.leafsspotmarg);
+        jTextField9.setText(Dados.leaves);
+        jTextField10.setText(Dados.leafspotsize);
+        jTextField11.setText(Dados.leafshred);
+        jTextField12.setText(Dados.leafmild);
+        jTextField13.setText(Dados.stem);
+        jTextField14.setText(Dados.canckerlesion);
+        jTextField15.setText(Dados.fruitingbodies);
+        jTextField16.setText(Dados.externaldecay);
+        jTextField17.setText(Dados.intdiscolor);
+        jTextField18.setText(Dados.sclerotia);
+        jTextField19.setText(Dados.fruitpods);
+        jTextField20.setText(Dados.seed);
+        jTextField21.setText(Dados.moldgrowth);
+        jTextField22.setText(Dados.seeddis);
+        jTextField23.setText(Dados.shriveling);
+        jTextField24.setText(Dados.data);
+        jTextField25.setText(Dados.croohist);
+        jTextField26.setText(Dados.areadamaged);
+        jTextField27.setText(Dados.severity);
+        jTextField28.setText(Dados.germination);
+        jTextField29.setText(Dados.lodgi);
+        jTextField30.setText(Dados.stemcancker);
+        jTextField31.setText(Dados.roots);
+        jTextField32.setText(Dados.mycelium);
+        jTextField33.setText(Dados.leafmalf);
+        jTextField34.setText(Dados.seedsize);
         
         
         
@@ -140,6 +139,7 @@ public class Tela2 extends javax.swing.JFrame {
         jTextField33 = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         jTextField34 = new javax.swing.JTextField();
+        jTextField35 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -311,6 +311,8 @@ public class Tela2 extends javax.swing.JFrame {
 
         jTextField34.setText("jTextField34");
 
+        jTextField35.setText("jTextField35");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -418,7 +420,10 @@ public class Tela2 extends javax.swing.JFrame {
                             .addComponent(jTextField32)
                             .addComponent(jTextField33)
                             .addComponent(jTextField34))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(449, 449, 449))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -562,7 +567,9 @@ public class Tela2 extends javax.swing.JFrame {
                                 .addComponent(jLabel34)))
                         .addGap(15, 15, 15)))
                 .addComponent(jLabel35)
-                .addGap(101, 101, 101)
+                .addGap(32, 32, 32)
+                .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -591,7 +598,7 @@ public class Tela2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Tela2 tela2 = new Tela2();
+        //Tela2 tela2 = new Tela2();
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -630,7 +637,7 @@ public class Tela2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Tela2().setVisible(true);
+                //new Tela2().setVisible(true);
             }
         });
     }
@@ -703,6 +710,7 @@ public class Tela2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField34;
+    private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;

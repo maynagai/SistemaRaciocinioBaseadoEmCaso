@@ -17,47 +17,137 @@ public class SimilaridadeLocal  {
     
     //presisa calcular similariedade
                         
-    /*public int SimilariedadeLocalDamagedArea(String casoProblema, String[] casoBase) {
+    public int SimilariedadeLocalDamagedArea(String casoProblema, String casoBase) {
         String lowArea = "low-area";
         String upperArea = "upper-area";
         String whole = "whole-field";
         String scat = "scattered";
         String desc = "unknown";
+        int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
-        int similaridade = 0;
-        int aux = 0;
-        if (lowArea.compareTo(casoProblema) == 0) {
-
-            return valorDamaged;
-
-        } else if (upperArea.compareTo(casoProblema) == 0) {
-            valorDamaged = 2;
-            System.out.println(valorDamaged);
-            return valorDamaged;
-        } else if (whole.compareTo(casoProblema) == 0) {
-            valorDamaged = 3;
-            System.out.println(valorDamaged);
-            return valorDamaged;
-        } else if (scat.compareTo(casoProblema) == 0) {
-            valorDamaged = 0;
-            System.out.println(valorDamaged);
-            return valorDamaged;
-        } else {
-            valorDamaged = -1;
-            return valorDamaged;
-        }
-
+        if(casoBase.compareTo(upperArea)==0) auxBase= 2;
+        else if(casoBase.compareTo(lowArea)==0) auxBase=1;
+        else if(casoBase.compareTo(whole)==0) auxBase=3;
+        else if(casoBase.compareTo(scat)==0) auxBase=0;
+        if(casoProblema.compareTo(upperArea)==0) auxProb = 2;
+        else if(casoProblema.compareTo(lowArea)==0) auxProb =1;
+        else if(casoProblema.compareTo(whole)==0) auxProb =3;
+        else if(casoProblema.compareTo(scat)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux)/2);              
+        return valorDamaged;
     }
     
-    public int SimilaridadeLocalDate(String casoProblema, String[] casoBase){}
+    //public int SimilaridadeLocalDate(String casoProblema, String[] casoBase){}
     
-    public int SimilaridadeLocalCropHist(String casoProblema, String[] casoBase){}
+    public int SimilaridadeLocalCropHist(String casoProblema, String casoBase){      
+        String diff = "diff-1st-year";
+        String sameFirst = "same-1st-yr";
+        String samelast = "same-lst-two-yrs";
+        String sameseve = "same-lst-sev-yrs";
+        String desc = "Desconhecido";
+        int auxBase = 0, auxProb = 0,aux; 
+        int valorDamaged = 567;
+        if(casoBase.compareTo(samelast)==0) auxBase= 2;
+        else if(casoBase.compareTo(sameFirst)==0) auxBase=1;
+        else if(casoBase.compareTo(sameseve)==0) auxBase=3;
+        else if(casoBase.compareTo(diff)==0) auxBase=0;
+        if(casoProblema.compareTo(samelast)==0) auxProb = 2;
+        else if(casoProblema.compareTo(sameFirst)==0) auxProb =1;
+        else if(casoProblema.compareTo(samelast)==0) auxProb =3;
+        else if(casoProblema.compareTo(diff)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux)/2);              
+        return valorDamaged;
     
-    public int SimilaridadeLocalSeverity(String casoProblema, String[] casoBase){}
-    public int SimilaridadeLocalGermination(String casoProblema, String[] casoBase){}
-    public int SimilaridadeLocalLodiging(String casoProblema, String[] casoBase){}
-    public int SimilaridadeLocalStemCanker(String casoProblema, String[] casoBase){}
-    public int SimilaridadeLocalRoots(String casoProblema, String[] casoBase){}*/
+    }
+    
+    public int SimilaridadeLocalSeverity(String casoProblema, String casoBase){
+        String min = "Minor";
+        String pot = "pot-severe";
+        String severe = "severe";
+        String desc = "Desconhecido";
+        int auxBase = 0, auxProb = 0,aux; 
+        int valorDamaged = 567;
+        if(casoBase.compareTo(severe)==0) auxBase= 2;
+        else if(casoBase.compareTo(pot)==0) auxBase=1;
+        else if(casoBase.compareTo(min)==0) auxBase=0;
+        if(casoProblema.compareTo(severe)==0) auxProb = 2;
+        else if(casoProblema.compareTo(pot)==0) auxProb =1;
+        else if(casoProblema.compareTo(min)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux));              
+        return valorDamaged;
+    }
+    public int SimilaridadeLocalGermination(String casoProblema, String casoBase){
+        String cem = "90-100%";
+        String oito = "80-89 %";
+        String lt = "lt-80%";
+        String desc = "Desconhecido";
+        int auxBase = 0, auxProb = 0,aux; 
+        int valorDamaged = 567;
+        if(casoBase.compareTo(lt)==0) auxBase= 2;
+        else if(casoBase.compareTo(oito)==0) auxBase=1;
+        else if(casoBase.compareTo(cem)==0) auxBase=0;
+        if(casoProblema.compareTo(lt)==0) auxProb = 2;
+        else if(casoProblema.compareTo(oito)==0) auxProb =1;
+        else if(casoProblema.compareTo(cem)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux));              
+        return valorDamaged;
+    }
+    public int SimilaridadeLocalLodiging(String casoProblema, String casoBase){
+        String sim = "yes";
+        String no = "no";
+        String desc = "Desconhecido";
+        int auxBase = 0, auxProb = 0,aux; 
+        int valorDamaged = 567;
+        if(casoBase.compareTo(no)==0) auxBase=1;
+        else if(casoBase.compareTo(sim)==0) auxBase=0;
+        else if(casoProblema.compareTo(no)==0) auxProb =1;
+        else if(casoProblema.compareTo(sim)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux));              
+        return valorDamaged;
+    }
+    
+    public int SimilaridadeLocalStemCanker(String casoProblema, String casoBase){
+        String abs = "Absent";
+        String below = "below-soil";
+        String soil = "Above-soil";
+        String sec = "Above-sec-nde";
+        String desc = "Desconhecido";
+        int auxBase = 0, auxProb = 0,aux; 
+        int valorDamaged = 567;
+        if(casoBase.compareTo(soil)==0) auxBase= 2;
+        else if(casoBase.compareTo(below)==0) auxBase=1;
+        else if(casoBase.compareTo(sec)==0) auxBase=3;
+        else if(casoBase.compareTo(abs)==0) auxBase=0;
+        if(casoProblema.compareTo(soil)==0) auxProb = 2;
+        else if(casoProblema.compareTo(below)==0) auxProb =1;
+        else if(casoProblema.compareTo(sec)==0) auxProb =3;
+        else if(casoProblema.compareTo(abs)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux)/2);              
+        return valorDamaged;
+    }
+    public int SimilaridadeLocalRoots(String casoProblema, String casoBase){
+        String norm = "Norm";
+        String rot = "Rotted";
+        String gals = "galls-cysts";
+        String desc = "Desconhecido";
+        int auxBase = 0, auxProb = 0,aux; 
+        int valorDamaged = 567;
+        if(casoBase.compareTo(gals)==0) auxBase= 2;
+        else if(casoBase.compareTo(rot)==0) auxBase=1;
+        else if(casoBase.compareTo(norm)==0) auxBase=0;
+        if(casoProblema.compareTo(gals)==0) auxProb = 2;
+        else if(casoProblema.compareTo(rot)==0) auxProb =1;
+        else if(casoProblema.compareTo(norm)==0) auxProb =0;
+        aux = auxProb-auxBase;
+        valorDamaged = 1-(Math.abs(aux)/2);              
+        return valorDamaged;
+    }
     
     //não calcula similariedade
 

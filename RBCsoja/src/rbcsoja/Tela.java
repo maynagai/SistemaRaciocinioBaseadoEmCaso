@@ -5,6 +5,7 @@
  */
 package rbcsoja;
 
+import java.awt.AWTKeyStroke;
 import javax.swing.JComboBox;
 
 /**
@@ -35,7 +36,7 @@ public class Tela extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        DamagedArea = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -64,42 +65,46 @@ public class Tela extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cankerLesion = new javax.swing.JComboBox<>();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jComboBox11 = new javax.swing.JComboBox<>();
-        jComboBox12 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jComboBox14 = new javax.swing.JComboBox<>();
-        jComboBox15 = new javax.swing.JComboBox<>();
-        jComboBox16 = new javax.swing.JComboBox<>();
-        jComboBox17 = new javax.swing.JComboBox<>();
-        jComboBox18 = new javax.swing.JComboBox<>();
-        jComboBox19 = new javax.swing.JComboBox<>();
-        jComboBox20 = new javax.swing.JComboBox<>();
-        jComboBox21 = new javax.swing.JComboBox<>();
-        jComboBox22 = new javax.swing.JComboBox<>();
-        jComboBox23 = new javax.swing.JComboBox<>();
-        jComboBox24 = new javax.swing.JComboBox<>();
-        jComboBox25 = new javax.swing.JComboBox<>();
-        jComboBox26 = new javax.swing.JComboBox<>();
-        jComboBox27 = new javax.swing.JComboBox<>();
-        jComboBox28 = new javax.swing.JComboBox<>();
-        jComboBox29 = new javax.swing.JComboBox<>();
-        jComboBox30 = new javax.swing.JComboBox<>();
-        jComboBox31 = new javax.swing.JComboBox<>();
-        jComboBox32 = new javax.swing.JComboBox<>();
-        jComboBox33 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        date = new javax.swing.JComboBox<>();
+        externalDecay = new javax.swing.JComboBox<>();
+        CropHist = new javax.swing.JComboBox<>();
+        fruitSpot = new javax.swing.JComboBox<>();
+        fruitingBodies = new javax.swing.JComboBox<>();
+        fruitingPods = new javax.swing.JComboBox<>();
+        germination = new javax.swing.JComboBox<>();
+        hail = new javax.swing.JComboBox<>();
+        intDiscolor = new javax.swing.JComboBox<>();
+        leafMalf = new javax.swing.JComboBox<>();
+        leafMild = new javax.swing.JComboBox<>();
+        leafspotMargin = new javax.swing.JComboBox<>();
+        leaves = new javax.swing.JComboBox<>();
+        lodging = new javax.swing.JComboBox<>();
+        moldGrowth = new javax.swing.JComboBox<>();
+        mycellium = new javax.swing.JComboBox<>();
+        plantStand = new javax.swing.JComboBox<>();
+        root = new javax.swing.JComboBox<>();
+        sclerotia = new javax.swing.JComboBox<>();
+        seeds = new javax.swing.JComboBox<>();
+        seedDiscolor = new javax.swing.JComboBox<>();
+        stemCanker = new javax.swing.JComboBox<>();
+        temps = new javax.swing.JComboBox<>();
+        seedSize = new javax.swing.JComboBox<>();
+        leafShread = new javax.swing.JComboBox<>();
+        shriveling = new javax.swing.JComboBox<>();
+        leafspotSize = new javax.swing.JComboBox<>();
+        stem = new javax.swing.JComboBox<>();
+        seetTmt = new javax.swing.JComboBox<>();
+        precip = new javax.swing.JComboBox<>();
+        severity = new javax.swing.JComboBox<>();
+        calcularSimilariedade = new javax.swing.JButton();
+        similaridadeMinima = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        leafspotHalo = new javax.swing.JComboBox<>();
+        jLabel37 = new javax.swing.JLabel();
+        plantGrowth = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,10 +118,10 @@ public class Tela extends javax.swing.JFrame {
 
         jLabel5.setText("Fruit Spot");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "low-area", "upper-area", "whole-field", "scattered", "unknown" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        DamagedArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "low-area", "upper-area", "whole-field", "scattered", "unknown" }));
+        DamagedArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                DamagedAreaActionPerformed(evt);
             }
         });
 
@@ -176,10 +181,10 @@ public class Tela extends javax.swing.JFrame {
 
         jLabel33.setText("Temp");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Brown", "Tan", "DNA", "Dk-brown-blk", "Unknown" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        cankerLesion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Brown", "Tan", "DNA", "Dk-brown-blk", "Unknown" }));
+        cankerLesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                cankerLesionActionPerformed(evt);
             }
         });
 
@@ -189,109 +194,227 @@ public class Tela extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Bitstream Charter", 2, 18)); // NOI18N
         jLabel35.setText("Escolha as Características referentes ao estado da soja");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro", "Unknown" }));
+        date.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro", "Unknown" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "firme-e-seco", "ausente", "desconhecido" }));
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "same-1st-yr", "same-lst-two-yrs", "diff-1st-year", "same-lst-sev-yrs", "unknown" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        externalDecay.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "firm-and-dry", "absent", "Desconhecido", "watery" }));
+        externalDecay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                externalDecayActionPerformed(evt);
             }
         });
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Unknown", "ausente", "Colored", "Brown-w/blk-specks", "dna" }));
-        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
+        CropHist.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "same-1st-yr", "same-lst-two-yrs", "diff-1st-year", "same-lst-sev-yrs", "unknown" }));
+        CropHist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox6ActionPerformed(evt);
+                CropHistActionPerformed(evt);
             }
         });
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ausente", "presente", "desconhecido" }));
-
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "normal", "doente", "desconhecido", "ausente", "presente" }));
-
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "90-100%", "80-89%", "lt-80%", "Desconhecido" }));
-        jComboBox9.addActionListener(new java.awt.event.ActionListener() {
+        fruitSpot.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Unknown", "absent", "Colored", "Brown-w/blk-specks", "distort", "dna" }));
+        fruitSpot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox9ActionPerformed(evt);
+                fruitSpotActionPerformed(evt);
             }
         });
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "sim", "nao", "Desconhecido", " " }));
-
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "preto", "marrom", "desconhecido", "nenhum" }));
-
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ausente", "desconhecido", "presente" }));
-        jComboBox12.addActionListener(new java.awt.event.ActionListener() {
+        fruitingBodies.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "absent", "present", "desconhecido" }));
+        fruitingBodies.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox12ActionPerformed(evt);
+                fruitingBodiesActionPerformed(evt);
             }
         });
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "ausente", "Upper-surf", "Lower-surf" }));
-
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "w-s-marg", "no-w-s-marg", "dna" }));
-        jComboBox14.addActionListener(new java.awt.event.ActionListener() {
+        fruitingPods.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Diseased", "few-present", "dna", " " }));
+        fruitingPods.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox14ActionPerformed(evt);
+                fruitingPodsActionPerformed(evt);
             }
         });
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Norm", "Abnorm" }));
-        jComboBox15.addActionListener(new java.awt.event.ActionListener() {
+        germination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "90-100%", "80-89%", "lt-80%", "Desconhecido" }));
+        germination.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox15ActionPerformed(evt);
+                germinationActionPerformed(evt);
             }
         });
 
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Yes", "No" }));
+        hail.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "yes", "no", "Desconhecido", " " }));
+        hail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hailActionPerformed(evt);
+            }
+        });
 
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        intDiscolor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "None", "Brown", "Black", " " }));
+        intDiscolor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                intDiscolorActionPerformed(evt);
+            }
+        });
 
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        leafMalf.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "absent", "Present", " " }));
+        leafMalf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leafMalfActionPerformed(evt);
+            }
+        });
 
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Normal", "lt-normal" }));
+        leafMild.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "ausente", "Upper-surf", "Lower-surf" }));
+        leafMild.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leafMildActionPerformed(evt);
+            }
+        });
 
-        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Rotted", "galls-cysts" }));
+        leafspotMargin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "w-s-marg", "no-w-s-marg", "dna" }));
+        leafspotMargin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leafspotMarginActionPerformed(evt);
+            }
+        });
 
-        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        leaves.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Norm", "Abnorm" }));
+        leaves.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leavesActionPerformed(evt);
+            }
+        });
 
-        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Abnorm" }));
+        lodging.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Yes", "No" }));
 
-        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        moldGrowth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        moldGrowth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moldGrowthActionPerformed(evt);
+            }
+        });
 
-        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "below-soil", "Above-soil", "Above-sec-nde" }));
+        mycellium.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        mycellium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mycelliumActionPerformed(evt);
+            }
+        });
 
-        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "lt-norm", "norm", "gt-norm" }));
+        plantStand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Normal", "lt-normal" }));
+        plantStand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plantStandActionPerformed(evt);
+            }
+        });
 
-        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "lt-norm" }));
+        root.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Rotted", "galls-cysts" }));
 
-        jComboBox27.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "absent", "Present" }));
+        sclerotia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        sclerotia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sclerotiaActionPerformed(evt);
+            }
+        });
 
-        jComboBox28.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        seeds.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Abnorm" }));
+        seeds.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seedsActionPerformed(evt);
+            }
+        });
 
-        jComboBox29.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "lt-1/8", "gt-1/8", "dna" }));
+        seedDiscolor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        seedDiscolor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seedDiscolorActionPerformed(evt);
+            }
+        });
 
-        jComboBox30.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Abnorm" }));
+        stemCanker.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "below-soil", "Above-soil", "Above-sec-nde" }));
 
-        jComboBox31.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "none", "fungicida", "Outros" }));
+        temps.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "lt-norm", "norm", "gt-norm" }));
+        temps.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tempsActionPerformed(evt);
+            }
+        });
 
-        jComboBox32.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "lt-normal", "Normal", "gt-normal" }));
+        seedSize.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "lt-norm" }));
+        seedSize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seedSizeActionPerformed(evt);
+            }
+        });
 
-        jComboBox33.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Minor", "pot-severe", "severe" }));
+        leafShread.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "absent", "Present" }));
+        leafShread.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leafShreadActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Calcular Diagnóstico");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        shriveling.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Absent", "Present" }));
+        shriveling.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                shrivelingActionPerformed(evt);
+            }
+        });
+
+        leafspotSize.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "lt-1/8", "gt-1/8", "dna" }));
+        leafspotSize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leafspotSizeActionPerformed(evt);
+            }
+        });
+
+        stem.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Abnorm" }));
+        stem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stemActionPerformed(evt);
+            }
+        });
+
+        seetTmt.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "none", "fungicida", "Outros" }));
+        seetTmt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seetTmtActionPerformed(evt);
+            }
+        });
+
+        precip.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "lt-normal", "Normal", "gt-normal" }));
+        precip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precipActionPerformed(evt);
+            }
+        });
+
+        severity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Minor", "pot-severe", "severe" }));
+
+        calcularSimilariedade.setText("Calcular Diagnóstico");
+        calcularSimilariedade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CalcularSimilariedade(evt);
             }
         });
 
-        jTextField1.setText("Similariedade minima para mostrar");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        similaridadeMinima.setText("Similariedade minima para mostrar");
+        similaridadeMinima.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                similaridadeMinimaActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setText("Leafspot Halo");
+
+        leafspotHalo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "absent", "yellow-halos", "no-yellow-halos", "Desconhecido", " " }));
+        leafspotHalo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                leafspotHaloActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setText("plant Growth");
+
+        plantGrowth.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Desconhecido", "Norm", "Abnorm", " " }));
+        plantGrowth.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plantGrowthActionPerformed(evt);
             }
         });
 
@@ -306,7 +429,7 @@ public class Tela extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel35)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(calcularSimilariedade, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
@@ -323,19 +446,19 @@ public class Tela extends javax.swing.JFrame {
                                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(86, 86, 86)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(leafMalf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(intDiscolor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(hail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(externalDecay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fruitSpot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fruitingBodies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(fruitingPods, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(germination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(leafMild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cankerLesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(DamagedArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(CropHist, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel29)
                                     .addComponent(jLabel3))
@@ -346,98 +469,108 @@ public class Tela extends javax.swing.JFrame {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel23)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(sclerotia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel22)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel20)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(plantStand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel19)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(mycellium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel16)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(leaves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel15)
                                                 .addGap(86, 86, 86)
-                                                .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(leafspotMargin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel18)
                                                     .addComponent(jLabel17))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(jComboBox16, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jComboBox17, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                                    .addComponent(lodging, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(moldGrowth, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(156, 156, 156)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel25)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(seedDiscolor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel24)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(seeds, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel26)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(seedSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel32)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(stemCanker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel33)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addComponent(temps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(124, 124, 124)
+                                        .addComponent(similaridadeMinima, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(146, 146, 146)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel28)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel21)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(precip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel27)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(seetTmt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel31)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(stem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel14)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                                                .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                                .addComponent(leafspotSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel30)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(shriveling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addComponent(jLabel13)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jComboBox27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(124, 124, 124)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(leafShread, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel28)
+                                                    .addComponent(jLabel36)
+                                                    .addComponent(jLabel37))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                            .addComponent(severity, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                            .addComponent(leafspotHalo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(plantGrowth, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))))
                                 .addGap(16, 16, 16))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(423, 423, 423)
                         .addComponent(jLabel34)))
-                .addContainerGap(3671, Short.MAX_VALUE))
+                .addContainerGap(3693, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -453,169 +586,317 @@ public class Tela extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel1)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(DamagedArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel2)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cankerLesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel16))
                                 .addGap(12, 12, 12)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CropHist, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel3)
                                         .addComponent(jLabel17)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel29)
-                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel18))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(externalDecay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel19))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fruitSpot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel20)))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6)
-                                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(fruitingBodies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fruitingPods, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel8)
-                                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(germination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel24)
-                                    .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(seeds, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel37)
+                                    .addComponent(plantGrowth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(hail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel25)
-                                    .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(seedDiscolor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel10)
-                                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(intDiscolor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel32)
-                                    .addComponent(jComboBox24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(264, 264, 264)
-                                        .addComponent(jLabel22))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel15)
-                                            .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(stemCanker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel36)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(264, 264, 264)
+                                            .addComponent(jLabel22))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(jLabel15)
+                                                .addComponent(leafspotMargin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGap(18, 18, 18)
+                                            .addComponent(leaves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(lodging, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(moldGrowth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(mycellium, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(plantStand, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(sclerotia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(leafMalf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel33)
-                                .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(temps, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel11))
                         .addGap(19, 19, 19))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
-                            .addComponent(jComboBox27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(leafShread, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel30)
-                            .addComponent(jComboBox28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(shriveling, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel14)
-                            .addComponent(jComboBox29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(leafspotSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel31)
-                            .addComponent(jComboBox30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(stem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel27)
-                            .addComponent(jComboBox31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(seetTmt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21)
-                            .addComponent(jComboBox32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(precip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel28)
-                            .addComponent(jComboBox33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(severity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(leafspotHalo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(similaridadeMinima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(leafMild, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel26)
-                    .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(seedSize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(calcularSimilariedade, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(612, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here;
+    private void DamagedAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DamagedAreaActionPerformed
         
-      
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_DamagedAreaActionPerformed
 
-    private void jComboBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox14ActionPerformed
+    public String getDamagedArea() {
+        String casoProblema;
+        Object objeto= DamagedArea.getSelectedItem();
+        casoProblema = objeto.toString();
+        //System.out.println(casoProblema);
+        return casoProblema;
+    }
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    public void setDamagedArea(JComboBox<String> DamagedArea) {
+        this.DamagedArea = DamagedArea;
+    }
+  
+    private void leafspotMarginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafspotMarginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_leafspotMarginActionPerformed
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    public String getLeafspotMargin() {
+        String casoProblema;
+        Object objeto= cankerLesion.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
 
-    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ActionPerformed
+    public void setLeafspotMargin(JComboBox<String> leafspotMargin) {
+        this.leafspotMargin = leafspotMargin;
+    }
 
-    private void jComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
+    private void cankerLesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cankerLesionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox9ActionPerformed
+    }//GEN-LAST:event_cankerLesionActionPerformed
 
-    private void jComboBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox12ActionPerformed
+    public String getCankerLesion() {
+        String casoProblema;
+        Object objeto= cankerLesion.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
 
-    private void jComboBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox15ActionPerformed
+    public void setCankerLesion(JComboBox<String> cankerLesion) {
+        this.cankerLesion = cankerLesion;
+    }
+
+    private void CropHistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CropHistActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox15ActionPerformed
+    }//GEN-LAST:event_CropHistActionPerformed
+
+    public String getCropHist() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setCropHist(JComboBox<String> CropHist) {
+        this.CropHist = CropHist;
+    }
+
+    public String getDate() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setDate(JComboBox<String> date) {
+        this.date = date;
+    }
+
+    public String getGermination() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setGermination(JComboBox<String> germination) {
+        this.germination = germination;
+    }
+
+    public String getLeafMalf() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafMalf(JComboBox<String> leafMalf) {
+        this.leafMalf = leafMalf;
+    }
+
+    public String getLodging() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLodging(JComboBox<String> lodging) {
+        this.lodging = lodging;
+    }
+
+    public String getRoot() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setRoot(JComboBox<String> root) {
+        this.root = root;
+    }
+
+    public String getSeverity() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSeverity(JComboBox<String> severity) {
+        this.severity = severity;
+    }
+
+    public String getStemCanker() {
+        String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setStemCanker(JComboBox<String> stemCanker) {
+        this.stemCanker = stemCanker;
+    }
+
+    private void fruitSpotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitSpotActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fruitSpotActionPerformed
+
+    public String getFruitSpot() {
+         String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setFruitSpot(JComboBox<String> fruitSpot) {
+        this.fruitSpot = fruitSpot;
+    }
+
+    private void germinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_germinationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_germinationActionPerformed
+
+    private void leafMalfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafMalfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leafMalfActionPerformed
+
+    private void leavesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leavesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leavesActionPerformed
+
+    public String getLeaves() {
+        String casoProblema;
+        Object objeto= leafspotHalo.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeaves(JComboBox<String> leaves) {
+        this.leaves = leaves;
+    }
 
     private void CalcularSimilariedade(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularSimilariedade
         // TODO add your handling code here:
@@ -623,11 +904,347 @@ public class Tela extends javax.swing.JFrame {
         nomeVariavel.setVisible(true); 
         this.dispose();
         
+        
+        
+        
     }//GEN-LAST:event_CalcularSimilariedade
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void similaridadeMinimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_similaridadeMinimaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+        String porcentagem;
+        porcentagem= similaridadeMinima.getText();
+        //System.out.println(porcentagem);
+    }//GEN-LAST:event_similaridadeMinimaActionPerformed
+
+    private void externalDecayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_externalDecayActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_externalDecayActionPerformed
+
+    private void fruitingBodiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitingBodiesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fruitingBodiesActionPerformed
+
+    private void fruitingPodsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitingPodsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fruitingPodsActionPerformed
+
+    private void hailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hailActionPerformed
+
+    private void plantStandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plantStandActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_plantStandActionPerformed
+
+    private void precipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precipActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precipActionPerformed
+
+    private void tempsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tempsActionPerformed
+
+    private void seetTmtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seetTmtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seetTmtActionPerformed
+
+    private void plantGrowthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plantGrowthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_plantGrowthActionPerformed
+
+    private void leafspotHaloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafspotHaloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leafspotHaloActionPerformed
+
+    private void leafspotSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafspotSizeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leafspotSizeActionPerformed
+
+    private void leafShreadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafShreadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leafShreadActionPerformed
+
+    private void leafMildActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafMildActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_leafMildActionPerformed
+
+    private void stemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stemActionPerformed
+
+    private void intDiscolorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intDiscolorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_intDiscolorActionPerformed
+
+    private void sclerotiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sclerotiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sclerotiaActionPerformed
+
+    private void seedsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seedsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seedsActionPerformed
+
+    private void moldGrowthActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moldGrowthActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moldGrowthActionPerformed
+
+    private void seedDiscolorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seedDiscolorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seedDiscolorActionPerformed
+
+    private void seedSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seedSizeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seedSizeActionPerformed
+
+    private void shrivelingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shrivelingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_shrivelingActionPerformed
+
+    private void mycelliumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mycelliumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mycelliumActionPerformed
+
+    public String getMycellium() {
+        String casoProblema;
+        Object objeto= shriveling.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setMycellium(JComboBox<String> mycellium) {
+        this.mycellium = mycellium;
+    }
+
+    public String getShriveling() {
+        String casoProblema;
+        Object objeto= shriveling.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setShriveling(JComboBox<String> shriveling) {
+        this.shriveling = shriveling;
+    }
+
+    public String getSeedSize() {
+        String casoProblema;
+        Object objeto= seedSize.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSeedSize(JComboBox<String> seedSize) {
+        this.seedSize = seedSize;
+    }
+
+    public String getSeedDiscolor() {
+        String casoProblema;
+        Object objeto= seedDiscolor.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSeedDiscolor(JComboBox<String> seedDiscolor) {
+        this.seedDiscolor = seedDiscolor;
+    }
+
+    public String getMoldGrowth() {
+        String casoProblema;
+        Object objeto= moldGrowth.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setMoldGrowth(JComboBox<String> moldGrowth) {
+        this.moldGrowth = moldGrowth;
+    }
+
+    public String getSeeds() {
+        String casoProblema;
+        Object objeto= seeds.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSeeds(JComboBox<String> seeds) {
+        this.seeds = seeds;
+    }
+
+    public String getSclerotia() {
+        String casoProblema;
+        Object objeto= sclerotia.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSclerotia(JComboBox<String> sclerotia) {
+        this.sclerotia = sclerotia;
+    }
+
+    public String getIntDiscolor() {
+        String casoProblema;
+        Object objeto= intDiscolor.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setIntDiscolor(JComboBox<String> intDiscolor) {
+        this.intDiscolor = intDiscolor;
+    }
+
+    public String getStem() {
+        String casoProblema;
+        Object objeto= stem.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setStem(JComboBox<String> stem) {
+        this.stem = stem;
+    }
+
+    public String getLeafMild() {
+        String casoProblema;
+        Object objeto= leafMild.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafMild(JComboBox<String> leafMild) {
+        this.leafMild = leafMild;
+    }
+
+    public String getLeafShread() {
+        String casoProblema;
+        Object objeto= leafspotHalo.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafShread(JComboBox<String> leafShread) {
+        this.leafShread = leafShread;
+    }
+
+    public String getLeafspotSize() {
+        String casoProblema;
+        Object objeto= leafspotHalo.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafspotSize(JComboBox<String> leafspotSize) {
+        this.leafspotSize = leafspotSize;
+    }
+
+    public String getLeafspotHalo() {
+        String casoProblema;
+        Object objeto= leafspotHalo.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafspotHalo(JComboBox<String> leafspotHalo) {
+        this.leafspotHalo = leafspotHalo;
+    }
+
+    public String getPlantGrowth() {
+        String casoProblema;
+        Object objeto= plantGrowth.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setPlantGrowth(JComboBox<String> plantGrowth) {
+        this.plantGrowth = plantGrowth;
+    }
+
+    public String getSeetTmt() {
+        String casoProblema;
+        Object objeto= seetTmt.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSeetTmt(JComboBox<String> seetTmt) {
+        this.seetTmt = seetTmt;
+    }
+
+    public String getTemps() {
+        String casoProblema;
+        Object objeto= temps.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setTemps(JComboBox<String> temps) {
+        this.temps = temps;
+    }
+
+    public String getPrecip() {
+        String casoProblema;
+        Object objeto= precip.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setPrecip(JComboBox<String> precip) {
+        this.precip = precip;
+    }
+
+    public String getPlantStand() {
+        String casoProblema;
+        Object objeto= plantStand.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setPlantStand(JComboBox<String> plantStand) {
+        this.plantStand = plantStand;
+    }
+
+    public String getHail() {
+        String casoProblema;
+        Object objeto= hail.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setHail(JComboBox<String> hail) {
+        this.hail = hail;
+    }
+
+    public String getFruitingPods() {
+        String casoProblema;
+        Object objeto= fruitingBodies.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setFruitingPods(JComboBox<String> fruitingPods) {
+        this.fruitingPods = fruitingPods;
+    }
+
+    public String getFruitingBodies() {
+        String casoProblema;
+        Object objeto= fruitingBodies.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setFruitingBodies(JComboBox<String> fruitingBodies) {
+        this.fruitingBodies = fruitingBodies;
+    }
+
+    public String getExternalDecay() {
+        String casoProblema;
+        Object objeto= externalDecay.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setExternalDecay(JComboBox<String> externalDecay) {
+        this.externalDecay = externalDecay;
+    }
 
     /**
      * @param args the command line arguments
@@ -665,40 +1282,18 @@ public class Tela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox12;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox15;
-    private javax.swing.JComboBox<String> jComboBox16;
-    private javax.swing.JComboBox<String> jComboBox17;
-    private javax.swing.JComboBox<String> jComboBox18;
-    private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox20;
-    private javax.swing.JComboBox<String> jComboBox21;
-    private javax.swing.JComboBox<String> jComboBox22;
-    private javax.swing.JComboBox<String> jComboBox23;
-    private javax.swing.JComboBox<String> jComboBox24;
-    private javax.swing.JComboBox<String> jComboBox25;
-    private javax.swing.JComboBox<String> jComboBox26;
-    private javax.swing.JComboBox<String> jComboBox27;
-    private javax.swing.JComboBox<String> jComboBox28;
-    private javax.swing.JComboBox<String> jComboBox29;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox30;
-    private javax.swing.JComboBox<String> jComboBox31;
-    private javax.swing.JComboBox<String> jComboBox32;
-    private javax.swing.JComboBox<String> jComboBox33;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
+    private javax.swing.JComboBox<String> CropHist;
+    public javax.swing.JComboBox<String> DamagedArea;
+    private javax.swing.JButton calcularSimilariedade;
+    private javax.swing.JComboBox<String> cankerLesion;
+    private javax.swing.JComboBox<String> date;
+    private javax.swing.JComboBox<String> externalDecay;
+    private javax.swing.JComboBox<String> fruitSpot;
+    private javax.swing.JComboBox<String> fruitingBodies;
+    private javax.swing.JComboBox<String> fruitingPods;
+    private javax.swing.JComboBox<String> germination;
+    private javax.swing.JComboBox<String> hail;
+    private javax.swing.JComboBox<String> intDiscolor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -728,12 +1323,38 @@ public class Tela extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> leafMalf;
+    private javax.swing.JComboBox<String> leafMild;
+    private javax.swing.JComboBox<String> leafShread;
+    private javax.swing.JComboBox<String> leafspotHalo;
+    private javax.swing.JComboBox<String> leafspotMargin;
+    private javax.swing.JComboBox<String> leafspotSize;
+    private javax.swing.JComboBox<String> leaves;
+    private javax.swing.JComboBox<String> lodging;
+    private javax.swing.JComboBox<String> moldGrowth;
+    private javax.swing.JComboBox<String> mycellium;
+    private javax.swing.JComboBox<String> plantGrowth;
+    private javax.swing.JComboBox<String> plantStand;
+    private javax.swing.JComboBox<String> precip;
+    private javax.swing.JComboBox<String> root;
+    private javax.swing.JComboBox<String> sclerotia;
+    private javax.swing.JComboBox<String> seedDiscolor;
+    private javax.swing.JComboBox<String> seedSize;
+    private javax.swing.JComboBox<String> seeds;
+    private javax.swing.JComboBox<String> seetTmt;
+    private javax.swing.JComboBox<String> severity;
+    private javax.swing.JComboBox<String> shriveling;
+    private javax.swing.JTextField similaridadeMinima;
+    private javax.swing.JComboBox<String> stem;
+    private javax.swing.JComboBox<String> stemCanker;
+    private javax.swing.JComboBox<String> temps;
     // End of variables declaration//GEN-END:variables
 }

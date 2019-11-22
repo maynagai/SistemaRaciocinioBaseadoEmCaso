@@ -20,6 +20,41 @@ public class Tela3 extends javax.swing.JFrame {
      */
     public Tela3() {
         initComponents();
+        textArea1.setText("Area Damaged = "+DadosCasoProblema.areadamaged +"\n"
+                +"Canker Lesion = "+DadosCasoProblema.canckerlesion + "\n"
+                +"Crop-Hist = "+DadosCasoProblema.croohist+"\n"
+                +"Data = "+ DadosCasoProblema.data+"\n"
+                +"External Decay = "+DadosCasoProblema.externaldecay+"\n"
+                +"Fruiting Bodies = "+DadosCasoProblema.fruitingbodies+"\n"
+                +"Fruiting Pods = "+DadosCasoProblema.fruitpods+"\n"
+                +"Fruiting Spots = "+DadosCasoProblema.fruitspots+"\n"
+                +"Germination = "+DadosCasoProblema.germination+"\n"
+                +"Hail = "+DadosCasoProblema.hail+"\n"
+                +"Int-Discolor = "+DadosCasoProblema.intdiscolor+"\n"
+                +"Leaf-Malf = "+DadosCasoProblema.leafmalf+"\n"
+                +"Leaf-Mild = "+DadosCasoProblema.leafmild+"\n"
+                +"Leaf-Shread = "+DadosCasoProblema.leafshred+"\n"
+                +"Leafspot-Halo = "+DadosCasoProblema.leafspothalo+"\n"
+                +"Leafspot-Size = "+DadosCasoProblema.leafspotsize+"\n"
+                +"Leafspot-Margin = "+DadosCasoProblema.leafsspotmarg+"\n"
+                +"Leaves = "+DadosCasoProblema.leaves+"\n"
+                +"Lodging = "+DadosCasoProblema.lodgi+"\n"
+                +"Mold Growth = "+DadosCasoProblema.moldgrowth+"\n"
+                +"Mycelium = "+DadosCasoProblema.mycelium+"\n"
+                +"Plant Growth = "+DadosCasoProblema.plantgrowth+"\n"
+                +"Plant-Stand = "+DadosCasoProblema.plantstand+"\n"
+                +"Precip = "+DadosCasoProblema.precip+"\n"
+                +"Roots = "+DadosCasoProblema.roots+"\n"
+                +"Sclerotia = "+DadosCasoProblema.sclerotia+"\n"
+                +"Seed = "+DadosCasoProblema.seed+"\n"
+                +"Seed Discolor = "+DadosCasoProblema.seeddis+"\n"
+                +"Seed Size = "+DadosCasoProblema.seedsize+"\n"
+                +"Seed-TMT = "+DadosCasoProblema.seedtmt+"\n"
+                +"Severity = "+DadosCasoProblema.severity+"\n"
+                +"Shriveling = "+DadosCasoProblema.shriveling+"\n"
+                +"Stem = "+DadosCasoProblema.stem+"\n"
+                +"Stem Canker = "+DadosCasoProblema.stemcancker+"\n"
+                +"Temp = "+DadosCasoProblema.temp);
     }
 
     /**
@@ -39,7 +74,7 @@ public class Tela3 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         textArea2 = new java.awt.TextArea();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        textArea1 = new java.awt.TextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,13 +107,6 @@ public class Tela3 extends javax.swing.JFrame {
 
         jLabel4.setText("jLabel4");
 
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -101,16 +129,16 @@ public class Tela3 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(139, 139, 139))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(163, 163, 163)
-                .addComponent(textArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(62, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(226, 226, 226))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(164, 164, 164)
+                .addComponent(textArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,7 +149,7 @@ public class Tela3 extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
+                    .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(textArea2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -140,9 +168,9 @@ public class Tela3 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-       // Tela2 tela2 = new Tela2();
-        //tela2.show();
-        this.dispose();
+      Tela2 tela2 = new Tela2();
+      tela2.show();
+      this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -154,10 +182,6 @@ public class Tela3 extends javax.swing.JFrame {
         //Tela2 tela2 = new Tela2();
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,12 +226,10 @@ public class Tela3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
+    private java.awt.TextArea textArea1;
     private java.awt.TextArea textArea2;
     // End of variables declaration//GEN-END:variables
 
-    public void setjTextField1(JTextField jTextField1) {
-        this.jTextField1 = jTextField1;
-    }
+    
  
 }

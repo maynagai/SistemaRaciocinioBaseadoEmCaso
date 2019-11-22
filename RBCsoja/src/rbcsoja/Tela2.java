@@ -17,40 +17,40 @@ public class Tela2 extends javax.swing.JFrame {
     public Tela2() {
         initComponents();
         
-        jTextField1.setText(Dados.plantstand);
-        jTextField2.setText(Dados.precip);
-        jTextField3.setText(Dados.temp);
-        jTextField4.setText(Dados.hail);
-        jTextField5.setText(Dados.seedtmt);
-        jTextField6.setText(Dados.plantgrowth);
-        jTextField7.setText(Dados.leafspothalo);
-        jTextField8.setText(Dados.leafsspotmarg);
-        jTextField9.setText(Dados.leaves);
-        jTextField10.setText(Dados.leafspotsize);
-        jTextField11.setText(Dados.leafshred);
-        jTextField12.setText(Dados.leafmild);
-        jTextField13.setText(Dados.stem);
-        jTextField14.setText(Dados.canckerlesion);
-        jTextField15.setText(Dados.fruitingbodies);
-        jTextField16.setText(Dados.externaldecay);
-        jTextField17.setText(Dados.intdiscolor);
-        jTextField18.setText(Dados.sclerotia);
-        jTextField19.setText(Dados.fruitpods);
-        jTextField20.setText(Dados.seed);
-        jTextField21.setText(Dados.moldgrowth);
-        jTextField22.setText(Dados.seeddis);
-        jTextField23.setText(Dados.shriveling);
-        jTextField24.setText(Dados.data);
-        jTextField25.setText(Dados.croohist);
-        jTextField26.setText(Dados.areadamaged);
-        jTextField27.setText(Dados.severity);
-        jTextField28.setText(Dados.germination);
-        jTextField29.setText(Dados.lodgi);
-        jTextField30.setText(Dados.stemcancker);
-        jTextField31.setText(Dados.roots);
-        jTextField32.setText(Dados.mycelium);
-        jTextField33.setText(Dados.leafmalf);
-        jTextField34.setText(Dados.seedsize);
+        jTextField1.setText(DadosCasoProblema.plantstand);
+        jTextField2.setText(DadosCasoProblema.precip);
+        jTextField3.setText(DadosCasoProblema.temp);
+        jTextField4.setText(DadosCasoProblema.hail);
+        jTextField5.setText(DadosCasoProblema.seedtmt);
+        jTextField6.setText(DadosCasoProblema.plantgrowth);
+        jTextField7.setText(DadosCasoProblema.leafspothalo);
+        jTextField8.setText(DadosCasoProblema.leafsspotmarg);
+        jTextField9.setText(DadosCasoProblema.leaves);
+        jTextField10.setText(DadosCasoProblema.leafspotsize);
+        jTextField11.setText(DadosCasoProblema.leafshred);
+        jTextField12.setText(DadosCasoProblema.leafmild);
+        jTextField13.setText(DadosCasoProblema.stem);
+        jTextField14.setText(DadosCasoProblema.canckerlesion);
+        jTextField15.setText(DadosCasoProblema.fruitingbodies);
+        jTextField16.setText(DadosCasoProblema.externaldecay);
+        jTextField17.setText(DadosCasoProblema.intdiscolor);
+        jTextField18.setText(DadosCasoProblema.sclerotia);
+        jTextField19.setText(DadosCasoProblema.fruitpods);
+        jTextField20.setText(DadosCasoProblema.seed);
+        jTextField21.setText(DadosCasoProblema.moldgrowth);
+        jTextField22.setText(DadosCasoProblema.seeddis);
+        jTextField23.setText(DadosCasoProblema.shriveling);
+        jTextField24.setText(DadosCasoProblema.data);
+        jTextField25.setText(DadosCasoProblema.croohist);
+        jTextField26.setText(DadosCasoProblema.areadamaged);
+        jTextField27.setText(DadosCasoProblema.severity);
+        jTextField28.setText(DadosCasoProblema.germination);
+        jTextField29.setText(DadosCasoProblema.lodgi);
+        jTextField30.setText(DadosCasoProblema.stemcancker);
+        jTextField31.setText(DadosCasoProblema.roots);
+        jTextField32.setText(DadosCasoProblema.mycelium);
+        jTextField33.setText(DadosCasoProblema.leafmalf);
+        jTextField34.setText(DadosCasoProblema.seedsize);
         
         
         
@@ -139,7 +139,6 @@ public class Tela2 extends javax.swing.JFrame {
         jTextField33 = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
         jTextField34 = new javax.swing.JTextField();
-        jTextField35 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -310,8 +309,11 @@ public class Tela2 extends javax.swing.JFrame {
         jLabel36.setText("seed size");
 
         jTextField34.setText("jTextField34");
-
-        jTextField35.setText("jTextField35");
+        jTextField34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField34ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -378,20 +380,26 @@ public class Tela2 extends javax.swing.JFrame {
                                     .addComponent(jLabel27)
                                     .addComponent(jLabel30)
                                     .addComponent(jLabel33))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
-                                    .addComponent(jTextField13)
-                                    .addComponent(jTextField14)
-                                    .addComponent(jTextField15)
-                                    .addComponent(jTextField16)
-                                    .addComponent(jTextField17)
-                                    .addComponent(jTextField18)
-                                    .addComponent(jTextField19)
-                                    .addComponent(jTextField20)
-                                    .addComponent(jTextField21)
-                                    .addComponent(jTextField22))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                                            .addComponent(jTextField13)
+                                            .addComponent(jTextField14)
+                                            .addComponent(jTextField15)
+                                            .addComponent(jTextField16)
+                                            .addComponent(jTextField17)
+                                            .addComponent(jTextField18))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jTextField20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(13, 13, 13)))))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel14)
                             .addComponent(jLabel15)
@@ -420,10 +428,7 @@ public class Tela2 extends javax.swing.JFrame {
                             .addComponent(jTextField32)
                             .addComponent(jTextField33)
                             .addComponent(jTextField34))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(449, 449, 449))))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -467,11 +472,11 @@ public class Tela2 extends javax.swing.JFrame {
                                 .addGap(6, 6, 6)
                                 .addComponent(jLabel13)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel21)
-                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel21)
+                                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel24)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel27)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,17 +486,9 @@ public class Tela2 extends javax.swing.JFrame {
                                     .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(72, 72, 72)
                                         .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(38, 38, 38))
+                                        .addGap(38, 120, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(177, 177, 177)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -535,7 +532,8 @@ public class Tela2 extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel25)
-                                .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel23)))
@@ -543,7 +541,8 @@ public class Tela2 extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel26)
-                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel27))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextField31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel28)))
@@ -552,7 +551,8 @@ public class Tela2 extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel29)
                                 .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel30))
+                                .addComponent(jLabel30)
+                                .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel31)))
@@ -564,12 +564,11 @@ public class Tela2 extends javax.swing.JFrame {
                                 .addComponent(jLabel33))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel34)))
+                                .addComponent(jLabel34)
+                                .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(15, 15, 15)))
                 .addComponent(jLabel35)
-                .addGap(32, 32, 32)
-                .addComponent(jTextField35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(101, 101, 101)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
@@ -592,7 +591,6 @@ public class Tela2 extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         Tela3 nomeVariavel = new Tela3(); 
-        
         nomeVariavel.setVisible(true); 
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -606,6 +604,10 @@ public class Tela2 extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField34ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField34ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -710,7 +712,6 @@ public class Tela2 extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField32;
     private javax.swing.JTextField jTextField33;
     private javax.swing.JTextField jTextField34;
-    private javax.swing.JTextField jTextField35;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;

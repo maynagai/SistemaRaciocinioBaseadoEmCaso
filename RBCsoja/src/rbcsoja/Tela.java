@@ -730,155 +730,22 @@ public class Tela extends javax.swing.JFrame {
     private void DamagedAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DamagedAreaActionPerformed
         
     }//GEN-LAST:event_DamagedAreaActionPerformed
-
-    public String getDamagedArea() {
-        String casoProblema;
-        Object objeto= DamagedArea.getSelectedItem();
-        casoProblema = objeto.toString();
-        //System.out.println(casoProblema);
-        return casoProblema;
-    }
-
-    public void setDamagedArea(JComboBox<String> DamagedArea) {
-        this.DamagedArea = DamagedArea;
-    }
   
     private void leafspotMarginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leafspotMarginActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_leafspotMarginActionPerformed
 
-    public String getLeafspotMargin() {
-        String casoProblema;
-        Object objeto= leafspotMargin.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setLeafspotMargin(JComboBox<String> leafspotMargin) {
-        this.leafspotMargin = leafspotMargin;
-    }
-
     private void cankerLesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cankerLesionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cankerLesionActionPerformed
-
-    public String getCankerLesion() {
-        String casoProblema;
-        Object objeto= cankerLesion.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setCankerLesion(JComboBox<String> cankerLesion) {
-        this.cankerLesion = cankerLesion;
-    }
 
     private void CropHistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CropHistActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CropHistActionPerformed
 
-    public String getCropHist() {
-        String casoProblema;
-        Object objeto= CropHist.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setCropHist(JComboBox<String> CropHist) {
-        this.CropHist = CropHist;
-    }
-
-    public String getDate() {
-        String casoProblemaData;
-        Object objeto= date.getSelectedItem();
-        casoProblemaData = objeto.toString();
-        return casoProblemaData;
-    }
-
-    public void setDate(JComboBox<String> date) {
-        this.date = date;
-    }
-
-    public String getGermination() {
-        String casoProblema;
-        Object objeto= germination.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setGermination(JComboBox<String> germination) {
-        this.germination = germination;
-    }
-
-    public String getLeafMalf() {
-        String casoProblema;
-        Object objeto= leafMalf.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setLeafMalf(JComboBox<String> leafMalf) {
-        this.leafMalf = leafMalf;
-    }
-
-    public String getLodging() {
-        String casoProblema;
-        Object objeto= lodging.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setLodging(JComboBox<String> lodging) {
-        this.lodging = lodging;
-    }
-
-    public String getRoot() {
-        String casoProblema;
-        Object objeto= root.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setRoot(JComboBox<String> root) {
-        this.root = root;
-    }
-
-    public String getSeverity() {
-        String casoProblema;
-        Object objeto= severity.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setSeverity(JComboBox<String> severity) {
-        this.severity = severity;
-    }
-
-    public String getStemCanker() {
-        String casoProblema;
-        Object objeto= stemCanker.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setStemCanker(JComboBox<String> stemCanker) {
-        this.stemCanker = stemCanker;
-    }
-
     private void fruitSpotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fruitSpotActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fruitSpotActionPerformed
-
-    public String getFruitSpot() {
-         String casoProblema;
-        Object objeto= fruitSpot.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setFruitSpot(JComboBox<String> fruitSpot) {
-        this.fruitSpot = fruitSpot;
-    }
 
     private void germinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_germinationActionPerformed
         // TODO add your handling code here:
@@ -892,57 +759,49 @@ public class Tela extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_leavesActionPerformed
 
-    public String getLeaves() {
-        String casoProblema;
-        Object objeto= leafspotHalo.getSelectedItem();
-        casoProblema = objeto.toString();
-        return casoProblema;
-    }
-
-    public void setLeaves(JComboBox<String> leaves) {
-        this.leaves = leaves;
-    }
 
     private void CalcularSimilariedade(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularSimilariedade
         // TODO add your handling code here:
-        Dados.leaves = getLeaves();
-        Dados.data = getDate();
-        Dados.plantstand=getPlantStand();
-        Dados.precip=getPrecip();
-        Dados.temp= getTemps();
-        Dados.hail= getHail();
-        Dados.seedtmt = getSeetTmt();
-        Dados.plantgrowth= getPlantGrowth();
-        Dados.leafspothalo= getLeafspotHalo();
-        Dados.leafsspotmarg= getLeafspotMargin();
-        Dados.leafspotsize= getLeafspotSize();
-        Dados.leafshred= getLeafShread();
-        Dados.leafmild = getLeafMild();
-        Dados.stem = getStem();
-        Dados.canckerlesion= getCankerLesion();
-        Dados.fruitingbodies= getFruitingBodies();
-        Dados.externaldecay = getExternalDecay();
-        Dados.intdiscolor = getIntDiscolor();
-        Dados.sclerotia= getSclerotia();
-        Dados.fruitpods = getFruitingPods();
-        Dados.fruitspots = getFruitingPods();
-        Dados.seed= getSeeds();
-        Dados.moldgrowth=getMoldGrowth();
-        Dados.seeddis=getSeedDiscolor();
-        Dados.shriveling= getShriveling();
-        Dados.croohist=getCropHist();
-        Dados.areadamaged=getDamagedArea();
-        Dados.severity=getSeverity();
-        Dados.germination=getGermination();
-        Dados.lodgi = getLodging();
-        Dados.stemcancker= getStemCanker();
-        Dados.roots=getRoot();
+        DadosCasoProblema.leaves = getLeaves();
+        DadosCasoProblema.data = getDate();
+        DadosCasoProblema.plantstand=getPlantStand();
+        DadosCasoProblema.precip=getPrecip();
+        DadosCasoProblema.temp= getTemps();
+        DadosCasoProblema.hail= getHail();
+        DadosCasoProblema.seedtmt = getSeetTmt();
+        DadosCasoProblema.plantgrowth= getPlantGrowth();
+        DadosCasoProblema.leafspothalo= getLeafspotHalo();
+        DadosCasoProblema.leafsspotmarg= getLeafspotMargin();
+        DadosCasoProblema.leafspotsize= getLeafspotSize();
+        DadosCasoProblema.leafshred= getLeafShread();
+        DadosCasoProblema.leafmild = getLeafMild();
+        DadosCasoProblema.stem = getStem();
+        DadosCasoProblema.canckerlesion= getCankerLesion();
+        DadosCasoProblema.fruitingbodies= getFruitingBodies();
+        DadosCasoProblema.externaldecay = getExternalDecay();
+        DadosCasoProblema.intdiscolor = getIntDiscolor();
+        DadosCasoProblema.sclerotia= getSclerotia();
+        DadosCasoProblema.fruitpods = getFruitingPods();
+        DadosCasoProblema.fruitspots = getFruitingPods();
+        DadosCasoProblema.seed= getSeeds();
+        DadosCasoProblema.moldgrowth=getMoldGrowth();
+        DadosCasoProblema.seeddis=getSeedDiscolor();
+        DadosCasoProblema.shriveling= getShriveling();
+        DadosCasoProblema.croohist=getCropHist();
+        DadosCasoProblema.areadamaged=getDamagedArea();
+        DadosCasoProblema.severity=getSeverity();
+        DadosCasoProblema.germination=getGermination();
+        DadosCasoProblema.lodgi = getLodging();
+        DadosCasoProblema.stemcancker= getStemCanker();
+        DadosCasoProblema.roots=getRoot();
+        DadosCasoProblema.seedsize=getSeedSize();
+        DadosCasoProblema.mycelium=getMycellium();
+        DadosCasoProblema.leafmalf=getLeafMalf();
+        RBCsoja rbc = new RBCsoja();
+        rbc.calcSimiMain();
         Tela2 nomeVariavel = new Tela2(); 
         nomeVariavel.setVisible(true); 
-        
-        
-        
-        
+        this.dispose();
         
     }//GEN-LAST:event_CalcularSimilariedade
 
@@ -950,7 +809,8 @@ public class Tela extends javax.swing.JFrame {
         // TODO add your handling code here:
         String porcentagem;
         porcentagem= similaridadeMinima.getText();
-        //System.out.println(porcentagem);
+        DadosCasoProblema.calcMinima = Integer.valueOf(porcentagem);
+        //System.out.println(DadosCasoProblema.calcMinima);
     }//GEN-LAST:event_similaridadeMinimaActionPerformed
 
     private void externalDecayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_externalDecayActionPerformed
@@ -1286,6 +1146,151 @@ public class Tela extends javax.swing.JFrame {
     public void setExternalDecay(JComboBox<String> externalDecay) {
         this.externalDecay = externalDecay;
     }
+    
+    public String getLeaves() {
+        String casoProblema;
+        Object objeto= leafspotHalo.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeaves(JComboBox<String> leaves) {
+        this.leaves = leaves;
+    }
+    
+     public String getCropHist() {
+        String casoProblema;
+        Object objeto= CropHist.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setCropHist(JComboBox<String> CropHist) {
+        this.CropHist = CropHist;
+    }
+
+    public String getDate() {
+        String casoProblemaData;
+        Object objeto= date.getSelectedItem();
+        casoProblemaData = objeto.toString();
+        return casoProblemaData;
+    }
+
+    public void setDate(JComboBox<String> date) {
+        this.date = date;
+    }
+
+    public String getGermination() {
+        String casoProblema;
+        Object objeto= germination.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setGermination(JComboBox<String> germination) {
+        this.germination = germination;
+    }
+
+    public String getLeafMalf() {
+        String casoProblema;
+        Object objeto= leafMalf.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafMalf(JComboBox<String> leafMalf) {
+        this.leafMalf = leafMalf;
+    }
+
+    public String getLodging() {
+        String casoProblema;
+        Object objeto= lodging.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLodging(JComboBox<String> lodging) {
+        this.lodging = lodging;
+    }
+
+    public String getRoot() {
+        String casoProblema;
+        Object objeto= root.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setRoot(JComboBox<String> root) {
+        this.root = root;
+    }
+
+    public String getSeverity() {
+        String casoProblema;
+        Object objeto= severity.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setSeverity(JComboBox<String> severity) {
+        this.severity = severity;
+    }
+
+    public String getStemCanker() {
+        String casoProblema;
+        Object objeto= stemCanker.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setStemCanker(JComboBox<String> stemCanker) {
+        this.stemCanker = stemCanker;
+    }
+    
+    public String getFruitSpot() {
+         String casoProblema;
+        Object objeto= fruitSpot.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setFruitSpot(JComboBox<String> fruitSpot) {
+        this.fruitSpot = fruitSpot;
+    }
+    
+
+    public String getDamagedArea() {
+        String casoProblema;
+        Object objeto= DamagedArea.getSelectedItem();
+        casoProblema = objeto.toString();
+        //System.out.println(casoProblema);
+        return casoProblema;
+    }
+
+    public void setDamagedArea(JComboBox<String> DamagedArea) {
+        this.DamagedArea = DamagedArea;
+    }
+    public String getCankerLesion() {
+        String casoProblema;
+        Object objeto= cankerLesion.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setCankerLesion(JComboBox<String> cankerLesion) {
+        this.cankerLesion = cankerLesion;
+    }
+
+    public String getLeafspotMargin() {
+        String casoProblema;
+        Object objeto= leafspotMargin.getSelectedItem();
+        casoProblema = objeto.toString();
+        return casoProblema;
+    }
+
+    public void setLeafspotMargin(JComboBox<String> leafspotMargin) {
+        this.leafspotMargin = leafspotMargin;
+    }
+
 
     /**
      * @param args the command line arguments

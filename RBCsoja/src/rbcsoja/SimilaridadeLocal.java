@@ -25,14 +25,14 @@ public class SimilaridadeLocal  {
         String desc = "unknown";
         int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
-        if(casoBase.compareTo(upperArea)==0) auxBase= 2;
-        else if(casoBase.compareTo(lowArea)==0) auxBase=1;
-        else if(casoBase.compareTo(whole)==0) auxBase=3;
-        else if(casoBase.compareTo(scat)==0) auxBase=0;
-        if(casoProblema.compareTo(upperArea)==0) auxProb = 2;
-        else if(casoProblema.compareTo(lowArea)==0) auxProb =1;
-        else if(casoProblema.compareTo(whole)==0) auxProb =3;
-        else if(casoProblema.compareTo(scat)==0) auxProb =0;
+        if(casoBase.compareToIgnoreCase(upperArea)==0) auxBase= 2;
+        else if(casoBase.compareToIgnoreCase(lowArea)==0) auxBase=1;
+        else if(casoBase.compareToIgnoreCase(whole)==0) auxBase=3;
+        else if(casoBase.compareToIgnoreCase(scat)==0) auxBase=0;
+        if(casoProblema.compareToIgnoreCase(upperArea)==0) auxProb = 2;
+        else if(casoProblema.compareToIgnoreCase(lowArea)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(whole)==0) auxProb =3;
+        else if(casoProblema.compareToIgnoreCase(scat)==0) auxProb =0;
         aux = auxProb-auxBase;
         valorDamaged = 1-(Math.abs(aux)/2);              
         return valorDamaged;
@@ -40,24 +40,28 @@ public class SimilaridadeLocal  {
     
     //public int SimilaridadeLocalDate(String casoProblema, String[] casoBase){}
     
-    public int SimilaridadeLocalCropHist(String casoProblema, String casoBase){      
+    public double SimilaridadeLocalCropHist(String casoProblema, String casoBase){      
         String diff = "diff-1st-year";
         String sameFirst = "same-1st-yr";
         String samelast = "same-lst-two-yrs";
         String sameseve = "same-lst-sev-yrs";
         String desc = "Desconhecido";
-        int auxBase = 0, auxProb = 0,aux; 
-        int valorDamaged = 567;
-        if(casoBase.compareTo(samelast)==0) auxBase= 2;
-        else if(casoBase.compareTo(sameFirst)==0) auxBase=1;
-        else if(casoBase.compareTo(sameseve)==0) auxBase=3;
-        else if(casoBase.compareTo(diff)==0) auxBase=0;
-        if(casoProblema.compareTo(samelast)==0) auxProb = 2;
-        else if(casoProblema.compareTo(sameFirst)==0) auxProb =1;
-        else if(casoProblema.compareTo(samelast)==0) auxProb =3;
-        else if(casoProblema.compareTo(diff)==0) auxProb =0;
+        double auxBase = 0, auxProb = 0,aux; 
+        double valorDamaged = 567;
+        if(casoBase.compareToIgnoreCase(samelast)==0) auxBase= 2;
+        else if(casoBase.compareToIgnoreCase(sameFirst)==0) auxBase=1;
+        else if(casoBase.compareToIgnoreCase(sameseve)==0) auxBase=3;
+        else if(casoBase.compareToIgnoreCase(diff)==0) auxBase=0;
+        
+        
+        if(casoProblema.compareToIgnoreCase(samelast)==0) auxProb = 2;
+        else if(casoProblema.compareToIgnoreCase(sameFirst)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(samelast)==0) auxProb =3;
+        else if(casoProblema.compareToIgnoreCase(diff)==0) auxProb =0;
+        
         aux = auxProb-auxBase;
-        valorDamaged = 1-(Math.abs(aux)/2);              
+        valorDamaged = 1-(Math.abs(aux)/2);
+        //System.out.println("valor = "+ valorDamaged);
         return valorDamaged;
     
     }
@@ -69,16 +73,17 @@ public class SimilaridadeLocal  {
         String desc = "Desconhecido";
         int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
-        if(casoBase.compareTo(severe)==0) auxBase= 2;
-        else if(casoBase.compareTo(pot)==0) auxBase=1;
-        else if(casoBase.compareTo(min)==0) auxBase=0;
-        if(casoProblema.compareTo(severe)==0) auxProb = 2;
-        else if(casoProblema.compareTo(pot)==0) auxProb =1;
-        else if(casoProblema.compareTo(min)==0) auxProb =0;
+        if(casoBase.compareToIgnoreCase(severe)==0) auxBase= 2;
+        else if(casoBase.compareToIgnoreCase(pot)==0) auxBase=1;
+        else if(casoBase.compareToIgnoreCase(min)==0) auxBase=0;
+        if(casoProblema.compareToIgnoreCase(severe)==0) auxProb = 2;
+        else if(casoProblema.compareToIgnoreCase(pot)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(min)==0) auxProb =0;
         aux = auxProb-auxBase;
         valorDamaged = 1-(Math.abs(aux));              
         return valorDamaged;
     }
+    
     public int SimilaridadeLocalGermination(String casoProblema, String casoBase){
         String cem = "90-100%";
         String oito = "80-89 %";
@@ -86,16 +91,17 @@ public class SimilaridadeLocal  {
         String desc = "Desconhecido";
         int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
-        if(casoBase.compareTo(lt)==0) auxBase= 2;
-        else if(casoBase.compareTo(oito)==0) auxBase=1;
-        else if(casoBase.compareTo(cem)==0) auxBase=0;
-        if(casoProblema.compareTo(lt)==0) auxProb = 2;
-        else if(casoProblema.compareTo(oito)==0) auxProb =1;
-        else if(casoProblema.compareTo(cem)==0) auxProb =0;
+        if(casoBase.compareToIgnoreCase(lt)==0) auxBase= 2;
+        else if(casoBase.compareToIgnoreCase(oito)==0) auxBase=1;
+        else if(casoBase.compareToIgnoreCase(cem)==0) auxBase=0;
+        if(casoProblema.compareToIgnoreCase(lt)==0) auxProb = 2;
+        else if(casoProblema.compareToIgnoreCase(oito)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(cem)==0) auxProb =0;
         aux = auxProb-auxBase;
         valorDamaged = 1-(Math.abs(aux));              
         return valorDamaged;
     }
+    
     public int SimilaridadeLocalLodiging(String casoProblema, String casoBase){
         String sim = "yes";
         String no = "no";
@@ -103,9 +109,9 @@ public class SimilaridadeLocal  {
         int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
         if(casoBase.compareTo(no)==0) auxBase=1;
-        else if(casoBase.compareTo(sim)==0) auxBase=0;
-        else if(casoProblema.compareTo(no)==0) auxProb =1;
-        else if(casoProblema.compareTo(sim)==0) auxProb =0;
+        else if(casoBase.compareToIgnoreCase(sim)==0) auxBase=0;
+        else if(casoProblema.compareToIgnoreCase(no)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(sim)==0) auxProb =0;
         aux = auxProb-auxBase;
         valorDamaged = 1-(Math.abs(aux));              
         return valorDamaged;
@@ -119,18 +125,19 @@ public class SimilaridadeLocal  {
         String desc = "Desconhecido";
         int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
-        if(casoBase.compareTo(soil)==0) auxBase= 2;
-        else if(casoBase.compareTo(below)==0) auxBase=1;
-        else if(casoBase.compareTo(sec)==0) auxBase=3;
-        else if(casoBase.compareTo(abs)==0) auxBase=0;
-        if(casoProblema.compareTo(soil)==0) auxProb = 2;
-        else if(casoProblema.compareTo(below)==0) auxProb =1;
-        else if(casoProblema.compareTo(sec)==0) auxProb =3;
-        else if(casoProblema.compareTo(abs)==0) auxProb =0;
+        if(casoBase.compareToIgnoreCase(soil)==0) auxBase= 2;
+        else if(casoBase.compareToIgnoreCase(below)==0) auxBase=1;
+        else if(casoBase.compareToIgnoreCase(sec)==0) auxBase=3;
+        else if(casoBase.compareToIgnoreCase(abs)==0) auxBase=0;
+        if(casoProblema.compareToIgnoreCase(soil)==0) auxProb = 2;
+        else if(casoProblema.compareToIgnoreCase(below)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(sec)==0) auxProb =3;
+        else if(casoProblema.compareToIgnoreCase(abs)==0) auxProb =0;
         aux = auxProb-auxBase;
         valorDamaged = 1-(Math.abs(aux)/2);              
         return valorDamaged;
     }
+    
     public int SimilaridadeLocalRoots(String casoProblema, String casoBase){
         String norm = "Norm";
         String rot = "Rotted";
@@ -138,12 +145,12 @@ public class SimilaridadeLocal  {
         String desc = "Desconhecido";
         int auxBase = 0, auxProb = 0,aux; 
         int valorDamaged = 567;
-        if(casoBase.compareTo(gals)==0) auxBase= 2;
-        else if(casoBase.compareTo(rot)==0) auxBase=1;
-        else if(casoBase.compareTo(norm)==0) auxBase=0;
-        if(casoProblema.compareTo(gals)==0) auxProb = 2;
-        else if(casoProblema.compareTo(rot)==0) auxProb =1;
-        else if(casoProblema.compareTo(norm)==0) auxProb =0;
+        if(casoBase.compareToIgnoreCase(gals)==0) auxBase= 2;
+        else if(casoBase.compareToIgnoreCase(rot)==0) auxBase=1;
+        else if(casoBase.compareToIgnoreCase(norm)==0) auxBase=0;
+        if(casoProblema.compareToIgnoreCase(gals)==0) auxProb = 2;
+        else if(casoProblema.compareToIgnoreCase(rot)==0) auxProb =1;
+        else if(casoProblema.compareToIgnoreCase(norm)==0) auxProb =0;
         aux = auxProb-auxBase;
         valorDamaged = 1-(Math.abs(aux)/2);              
         return valorDamaged;
@@ -157,40 +164,39 @@ public class SimilaridadeLocal  {
         String dna = "DNA";
         String blk = "Dk-brown-blk";
         String desc = "Unknown";
-        if (brown.compareTo(casoProblema) == 0) {
+        if (brown.compareToIgnoreCase(casoProblema) == 0) {
             return 1;
-        } else if (tan.compareTo(casoProblema) == 0) {
+        } else if (tan.compareToIgnoreCase(casoProblema) == 0) {
             return 3;
-        } else if (dna.compareTo(casoProblema) == 0) {
+        } else if (dna.compareToIgnoreCase(casoProblema) == 0) {
             return 0;
-        } else if (blk.compareTo(casoProblema) == 0) {
+        } else if (blk.compareToIgnoreCase(casoProblema) == 0) {
             return 2;
         } else {
-            return -1;
+            System.out.println("Erro");
+           return -1;
         }
 
     }
-    
-    
 
     public int SimilaridadeLocalExternalDecay(String casoProblema) {
         String firm="firm-and-dry";
         String abs= "absent";
         String wat="watery";
         String desc = "Desconhecido";
-        if(casoProblema.compareTo(firm)==0) return 1;
-        else if(casoProblema.compareTo(abs)==0) return 0;
-        else if(casoProblema.compareTo(wat)==0) return 2;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(firm)==0) return 1;
+        else if(casoProblema.compareToIgnoreCase(abs)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(wat)==0) return 2;
+        else {System.out.println("Erro"); return -1;}
     }
 
     public int SimilaridadeLocalPlantStand(String casoProblema) {
         String des ="Desconhecido";
         String nor="Normal";
         String it="lt-normal";
-        if(casoProblema.compareTo(nor)==0) return 0;
-        else if(casoProblema.compareTo(it)==0) return 1;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(it)==0) return 1;
+        else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalPrecip(String casoProblema) {
@@ -198,10 +204,10 @@ public class SimilaridadeLocal  {
        String it="lt-normal";
        String norm="Normal";
        String gt ="gt-normal";
-       if(casoProblema.compareTo(it)==0) return 0;
-       else if (casoProblema.compareTo(norm)==0) return 1;
-       else if(casoProblema.compareTo(gt)==0) return 2;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(it)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(norm)==0) return 1;
+       else if(casoProblema.compareToIgnoreCase(gt)==0) return 2;
+       else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalTemp(String casoProblema) {
@@ -209,19 +215,19 @@ public class SimilaridadeLocal  {
         String it="lt-norm";
         String norm= "norm";
         String gt="gt-norm";
-        if(casoProblema.compareTo(it)==0) return 0;
-        else if(casoProblema.compareTo(norm)==0) return 1;
-        else if(casoProblema.compareTo(gt)==0) return 2;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(it)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(norm)==0) return 1;
+        else if(casoProblema.compareToIgnoreCase(gt)==0) return 2;
+        else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalHail(String casoProblema) {
         String si ="yes";
         String no="no";
         String des="Desconhecido";
-        if(casoProblema.compareTo(si)==0) return 0;
-        else if (casoProblema.compareTo(no)==0)return 1;
-        else return -1;        
+        if(casoProblema.compareToIgnoreCase(si)==0) return 0;
+        else if (casoProblema.compareToIgnoreCase(no)==0)return 1;
+        else System.out.println("Erro"); return -1;        
     }
 
     public int SimilaridadeLocalSeedTmt(String casoProblema) {
@@ -229,19 +235,19 @@ public class SimilaridadeLocal  {
         String non="none";
         String fun="fungicida";
         String ou ="Outros";
-        if(casoProblema.compareTo(non)==0)return 0;
-        else if(casoProblema.compareTo(fun)==0) return 1;
-        else if(casoProblema.compareTo(ou)==0) return 2;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(non)==0)return 0;
+        else if(casoProblema.compareToIgnoreCase(fun)==0) return 1;
+        else if(casoProblema.compareToIgnoreCase(ou)==0) return 2;
+        else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalPlantGrowth(String casoProblema) {
        String des="Desconhecido";
        String nor="Norm";
        String ab="Abnorm";
-       if(casoProblema.compareTo(nor)==0) return 0;
-       else if (casoProblema.compareTo(ab)==0) return 0;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
+       else System.out.println("Erro"); return -1;
 
     }
 
@@ -250,10 +256,10 @@ public class SimilaridadeLocal  {
        String yel ="yellow-halos";
        String no="no-yellow-halos";
        String des="Desconhecido";
-       if(casoProblema.compareTo(abs)==0) return 0;
-       else if(casoProblema.compareTo(yel)==0) return 1;
-       else if(casoProblema.compareTo(no)==0) return 2;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(abs)==0) return 0;
+       else if(casoProblema.compareToIgnoreCase(yel)==0) return 1;
+       else if(casoProblema.compareToIgnoreCase(no)==0) return 2;
+       else System.out.println("Erro"); return -1;
 
     }
 
@@ -262,17 +268,17 @@ public class SimilaridadeLocal  {
        String ws="w-s-marg";
        String no="no-w-s-marg";
        String dna ="dna";
-       if(casoProblema.compareTo(ws)==0) return 0;
-       else if(casoProblema.compareTo(no)==0) return 1;
-       else if(casoProblema.compareTo(dna)==0) return 2;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(ws)==0) return 0;
+       else if(casoProblema.compareToIgnoreCase(no)==0) return 1;
+       else if(casoProblema.compareToIgnoreCase(dna)==0) return 2;
+       else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalLeaves(String casoProblema) {
        String no="Norm";
        String ab="Abnorm";
-       if(casoProblema.compareTo(no)==0) return 0;
-       else return 1;
+       if(casoProblema.compareToIgnoreCase(no)==0) return 0;
+       else System.out.println("Erro"); return 1;
     }
 
     public int SimilaridadeLocalLeafSpotSize(String casoProblema) {
@@ -280,19 +286,19 @@ public class SimilaridadeLocal  {
        String it="lt-1/8";
        String gt="gt-1/8";
        String dna="dna";
-       if(casoProblema.compareTo(it)==0) return 0;
-       else if(casoProblema.compareTo(gt)==0)return 1;
-       else if(casoProblema.compareTo(dna)==0) return 2;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(it)==0) return 0;
+       else if(casoProblema.compareToIgnoreCase(gt)==0)return 1;
+       else if(casoProblema.compareToIgnoreCase(dna)==0) return 2;
+       else System.out.println("Erro"); return -1;
     }
 
-    public int SimilaridadeLocalLeafShred(String casoProblema) {
+    public int SimilaridadeLocalLeafShred(String casoProblema) { //olhar melhor
         String des="Desconhecido";
        String nor="Norm";
        String ab="Abnorm";
-       if(casoProblema.compareTo(nor)==0) return 0;
-       else if (casoProblema.compareTo(ab)==0) return 1;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
+       else System.out.println("Erro"); return -1;
 
     }
 
@@ -301,28 +307,28 @@ public class SimilaridadeLocal  {
          String au="ausente";
          String up="Upper-surf";
          String lo="Lower-surf";
-        if(casoProblema.compareTo(au)==0) return 0;
-       else if (casoProblema.compareTo(up)==0) return 1;
-        else if (casoProblema.compareTo(lo)==0) return 2;
-       else return -1;
+        if(casoProblema.compareToIgnoreCase(au)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(up)==0) return 1;
+        else if (casoProblema.compareToIgnoreCase(lo)==0) return 2;
+        else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalStem(String casoProblema) {
        String des="Desconhecido";
        String nor="Norm";
        String ab="Abnorm";
-       if(casoProblema.compareTo(nor)==0) return 0;
-       else if (casoProblema.compareTo(ab)==0) return 1;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
+       else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalFruitingBodies(String casoProblema) {
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
+        else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalIntDiscolor(String casoProblema) {
@@ -331,49 +337,49 @@ public class SimilaridadeLocal  {
         String br="Brown";
         String bl="Black";
 
-       if(casoProblema.compareTo(non)==0) return 0;
-       else if (casoProblema.compareTo(br)==0) return 1;
-       else if (casoProblema.compareTo(bl)==0) return 2;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(non)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(br)==0) return 1;
+       else if (casoProblema.compareToIgnoreCase(bl)==0) return 2;
+       else System.out.println("Erro int"); return -1;
     }
 
     public int SimilaridadeLocalSclerotia(String casoProblema) {
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
+        else System.out.println("Erro scle"); return -1;
     }
 
-    public int SimilaridadeLocalFruitPods(String casoProblema) {
+    public int SimilaridadeLocalFruitPods(String casoProblema) {//olhar melhor
        String des= "Desconhecido";
        String norm="Norm";
        String dis="Diseased";
        String pres="few-present";
        String dna="dna";
-       if(casoProblema.compareTo(norm)==0) return 0;
-       else if(casoProblema.compareTo(dis)==0) return 1;
-       else if(casoProblema.compareTo(pres)==0) return 2;
-       else if(casoProblema.compareTo(dna)==0) return 3;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(norm)==0) return 0;
+       else if(casoProblema.compareToIgnoreCase(dis)==0) return 1;
+       else if(casoProblema.compareToIgnoreCase(pres)==0) return 2;
+       else if(casoProblema.compareToIgnoreCase(dna)==0) return 3;
+       else System.out.println("Erro fruitpos"); return -1;
        
 
     }
 
-    public int SimilaridadeLocalFruitSpots(String casoProblema) {
-       String un="Unknown";
+    public int SimilaridadeLocalFruitSpots(String casoProblema) {//olhar melhor
+       String un="unknown";
        String abs ="absent";
        String colo ="Colored";
        String bk = "Brown-w/blk-specks";
        String dna="dna";
        String dis ="distort";
-       if(casoProblema.compareTo(abs)==0) return 0;
-       else if(casoProblema.compareTo(colo)==0) return 1;
-       else if(casoProblema.compareTo(bk)==0) return 2;
-       else if(casoProblema.compareTo(dis)==0) return 3;
-       else if(casoProblema.compareTo(dna)==0) return 4;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(abs)==0) return 0;
+       else if(casoProblema.compareToIgnoreCase(colo)==0) return 1;
+       else if(casoProblema.compareToIgnoreCase(bk)==0) return 2;
+       else if(casoProblema.compareToIgnoreCase(dis)==0) return 3;
+       else if(casoProblema.compareToIgnoreCase(dna)==0) return 4;
+       else System.out.println("Erro fruitspo"); return -1;
           
     }
 
@@ -381,61 +387,62 @@ public class SimilaridadeLocal  {
        String des="Desconhecido";
        String nor="Norm";
        String ab="Abnorm";
-       if(casoProblema.compareTo(nor)==0) return 0;
-       else if (casoProblema.compareTo(ab)==0) return 1;
-       else return -1;
+       if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
+       else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalMoldGrowth(String casoProblema) {
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
+        else System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalSeedDis(String casoProblema) {
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 0;
+        else  System.out.println("Erro"); return -1;
     }
 
     public int SimilaridadeLocalSeedSize(String casoProblema) {
       String des="Desconhecido";
        String it="lt-normal";
        String norm="Normal";
-       if(casoProblema.compareTo(it)==0) return 1;
-       else if (casoProblema.compareTo(norm)==0) return 0;
-       else return -1;  
+       if(casoProblema.compareToIgnoreCase(it)==0) return 1;
+       else if (casoProblema.compareToIgnoreCase(norm)==0) return 0;
+       else System.out.println("Erro"); return -1;  
     }
 
     public int SimilaridadeLocalShriveling(String casoProblema) {
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
+        else System.out.println("Erro"); return -1;
     }
     
     public int SimilaridadeLocalMycelium(String casoProblema){
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
+        else System.out.println("Erro"); return -1;
     }
+    
     public int SimilaridadeLocalLeafMalf(String casoProblema){
         String aus="absent";
         String pres = "present";
         String desc="desconhecido";
-        if(casoProblema.compareTo(aus)==0) return 0;
-        else if(casoProblema.compareTo(pres)==0) return 0;
-        else return -1;
+        if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
+        else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
+        else System.out.println("Erro"); return -1;
     }
 }

@@ -11,6 +11,7 @@ package rbcsoja;
  */
 public class DadosCasoProblema {
     Tela tela1 = new Tela();
+    
     static String leaves;
     static String data;
     static String plantstand;
@@ -48,5 +49,7 @@ public class DadosCasoProblema {
     static String seedsize;
     
     static Integer calcMinima;
+    
+    static double[] global = new double[309]; 
 
 }

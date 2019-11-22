@@ -173,7 +173,7 @@ public class SimilaridadeLocal  {
         } else if (blk.compareToIgnoreCase(casoProblema) == 0) {
             return 2;
         } else {
-            System.out.println("Erro");
+            System.out.println("Erro canker lesion");
            return -1;
         }
 
@@ -187,7 +187,7 @@ public class SimilaridadeLocal  {
         if(casoProblema.compareToIgnoreCase(firm)==0) return 1;
         else if(casoProblema.compareToIgnoreCase(abs)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(wat)==0) return 2;
-        else {System.out.println("Erro"); return -1;}
+        else {System.out.println("Erro external decay"); return -1;}
     }
 
     public int SimilaridadeLocalPlantStand(String casoProblema) {
@@ -196,7 +196,7 @@ public class SimilaridadeLocal  {
         String it="lt-normal";
         if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(it)==0) return 1;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro plant stand"); return -1;
     }
 
     public int SimilaridadeLocalPrecip(String casoProblema) {
@@ -207,7 +207,7 @@ public class SimilaridadeLocal  {
        if(casoProblema.compareToIgnoreCase(it)==0) return 0;
        else if (casoProblema.compareToIgnoreCase(norm)==0) return 1;
        else if(casoProblema.compareToIgnoreCase(gt)==0) return 2;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro PRECIP"); return -1;
     }
 
     public int SimilaridadeLocalTemp(String casoProblema) {
@@ -218,7 +218,7 @@ public class SimilaridadeLocal  {
         if(casoProblema.compareToIgnoreCase(it)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(norm)==0) return 1;
         else if(casoProblema.compareToIgnoreCase(gt)==0) return 2;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro TEMP"); return -1;
     }
 
     public int SimilaridadeLocalHail(String casoProblema) {
@@ -227,7 +227,7 @@ public class SimilaridadeLocal  {
         String des="Desconhecido";
         if(casoProblema.compareToIgnoreCase(si)==0) return 0;
         else if (casoProblema.compareToIgnoreCase(no)==0)return 1;
-        else System.out.println("Erro"); return -1;        
+        else System.out.println("Erro HAIL"); return -1;        
     }
 
     public int SimilaridadeLocalSeedTmt(String casoProblema) {
@@ -238,7 +238,7 @@ public class SimilaridadeLocal  {
         if(casoProblema.compareToIgnoreCase(non)==0)return 0;
         else if(casoProblema.compareToIgnoreCase(fun)==0) return 1;
         else if(casoProblema.compareToIgnoreCase(ou)==0) return 2;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro SEED TMT"); return -1;
     }
 
     public int SimilaridadeLocalPlantGrowth(String casoProblema) {
@@ -247,7 +247,7 @@ public class SimilaridadeLocal  {
        String ab="Abnorm";
        if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
        else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro PALNT GROWTH"); return -1;
 
     }
 
@@ -259,7 +259,7 @@ public class SimilaridadeLocal  {
        if(casoProblema.compareToIgnoreCase(abs)==0) return 0;
        else if(casoProblema.compareToIgnoreCase(yel)==0) return 1;
        else if(casoProblema.compareToIgnoreCase(no)==0) return 2;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro HALO"); return -1;
 
     }
 
@@ -271,14 +271,15 @@ public class SimilaridadeLocal  {
        if(casoProblema.compareToIgnoreCase(ws)==0) return 0;
        else if(casoProblema.compareToIgnoreCase(no)==0) return 1;
        else if(casoProblema.compareToIgnoreCase(dna)==0) return 2;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro MARGIN"); return -1;
     }
 
-    public int SimilaridadeLocalLeaves(String casoProblema) {
+    public int SimilaridadeLocalLeaves(String casoProblema) { //OLHAR MELHOR
        String no="Norm";
        String ab="Abnorm";
+       
        if(casoProblema.compareToIgnoreCase(no)==0) return 0;
-       else System.out.println("Erro"); return 1;
+       else /*System.out.println("Erro LEAVES");*/ return 1;
     }
 
     public int SimilaridadeLocalLeafSpotSize(String casoProblema) {
@@ -289,16 +290,17 @@ public class SimilaridadeLocal  {
        if(casoProblema.compareToIgnoreCase(it)==0) return 0;
        else if(casoProblema.compareToIgnoreCase(gt)==0)return 1;
        else if(casoProblema.compareToIgnoreCase(dna)==0) return 2;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro LEAFSPOT SIZE"); return -1;
     }
 
     public int SimilaridadeLocalLeafShred(String casoProblema) { //olhar melhor
         String des="Desconhecido";
-       String nor="Norm";
-       String ab="Abnorm";
-       if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
-       else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
-       else System.out.println("Erro"); return -1;
+       String ab="absent";
+       String pres="Present";
+
+       if(casoProblema.compareToIgnoreCase(ab)==0) return 0;
+       else if (casoProblema.compareToIgnoreCase(pres)==0) return 1;
+       else System.out.println("Erro LEAF SHREAD = "+casoProblema); return -1;
 
     }
 
@@ -310,7 +312,7 @@ public class SimilaridadeLocal  {
         if(casoProblema.compareToIgnoreCase(au)==0) return 0;
        else if (casoProblema.compareToIgnoreCase(up)==0) return 1;
         else if (casoProblema.compareToIgnoreCase(lo)==0) return 2;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro LEAF MILD"); return -1;
     }
 
     public int SimilaridadeLocalStem(String casoProblema) {
@@ -319,7 +321,7 @@ public class SimilaridadeLocal  {
        String ab="Abnorm";
        if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
        else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro STEM"); return -1;
     }
 
     public int SimilaridadeLocalFruitingBodies(String casoProblema) {
@@ -328,7 +330,7 @@ public class SimilaridadeLocal  {
         String desc="desconhecido";
         if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro FRUITING BODIES"); return -1;
     }
 
     public int SimilaridadeLocalIntDiscolor(String casoProblema) {
@@ -352,7 +354,7 @@ public class SimilaridadeLocal  {
         else System.out.println("Erro scle"); return -1;
     }
 
-    public int SimilaridadeLocalFruitPods(String casoProblema) {//olhar melhor
+    public int SimilaridadeLocalFruitPods(String casoProblema) {
        String des= "Desconhecido";
        String norm="Norm";
        String dis="Diseased";
@@ -374,12 +376,13 @@ public class SimilaridadeLocal  {
        String bk = "Brown-w/blk-specks";
        String dna="dna";
        String dis ="distort";
+
        if(casoProblema.compareToIgnoreCase(abs)==0) return 0;
        else if(casoProblema.compareToIgnoreCase(colo)==0) return 1;
        else if(casoProblema.compareToIgnoreCase(bk)==0) return 2;
        else if(casoProblema.compareToIgnoreCase(dis)==0) return 3;
        else if(casoProblema.compareToIgnoreCase(dna)==0) return 4;
-       else System.out.println("Erro fruitspo"); return -1;
+       else System.out.println("Erro fruitspo = " +casoProblema); return -1;
           
     }
 
@@ -389,7 +392,7 @@ public class SimilaridadeLocal  {
        String ab="Abnorm";
        if(casoProblema.compareToIgnoreCase(nor)==0) return 0;
        else if (casoProblema.compareToIgnoreCase(ab)==0) return 1;
-       else System.out.println("Erro"); return -1;
+       else System.out.println("Erro SEED"); return -1;
     }
 
     public int SimilaridadeLocalMoldGrowth(String casoProblema) {
@@ -398,7 +401,7 @@ public class SimilaridadeLocal  {
         String desc="desconhecido";
         if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro MOLD GROWTH"); return -1;
     }
 
     public int SimilaridadeLocalSeedDis(String casoProblema) {
@@ -407,16 +410,17 @@ public class SimilaridadeLocal  {
         String desc="desconhecido";
         if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(pres)==0) return 0;
-        else  System.out.println("Erro"); return -1;
+        else  System.out.println("Erro SEED DIS"); return -1;
     }
 
-    public int SimilaridadeLocalSeedSize(String casoProblema) {
+    public int SimilaridadeLocalSeedSize(String casoProblema) { //OLHAR MELHOR
       String des="Desconhecido";
-       String it="lt-normal";
-       String norm="Normal";
+       String it="lt-norm";
+       String norm="Norm";
+       
        if(casoProblema.compareToIgnoreCase(it)==0) return 1;
        else if (casoProblema.compareToIgnoreCase(norm)==0) return 0;
-       else System.out.println("Erro"); return -1;  
+       else System.out.println("Erro SEED SIZE"); return -1;  
     }
 
     public int SimilaridadeLocalShriveling(String casoProblema) {
@@ -425,7 +429,7 @@ public class SimilaridadeLocal  {
         String desc="desconhecido";
         if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro SHRIVE"); return -1;
     }
     
     public int SimilaridadeLocalMycelium(String casoProblema){
@@ -434,7 +438,7 @@ public class SimilaridadeLocal  {
         String desc="desconhecido";
         if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro MYCELIUM"); return -1;
     }
     
     public int SimilaridadeLocalLeafMalf(String casoProblema){
@@ -443,6 +447,6 @@ public class SimilaridadeLocal  {
         String desc="desconhecido";
         if(casoProblema.compareToIgnoreCase(aus)==0) return 0;
         else if(casoProblema.compareToIgnoreCase(pres)==0) return 1;
-        else System.out.println("Erro"); return -1;
+        else System.out.println("Erro LEAF MALF"); return -1;
     }
 }

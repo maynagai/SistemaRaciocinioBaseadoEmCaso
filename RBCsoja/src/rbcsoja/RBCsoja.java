@@ -22,8 +22,9 @@ public class RBCsoja {
     public void calcSimiMain() {
     File arquivoCSV = new File("/home/mayla/NetBeansProjects/RBCsoja/src/rbcsoja/casoBase");
     int simcan,simext,simfrub,simfrus,simfrup,simhail,simplasta,simpre,simtem,simsetmt,simplagro,simhalo,simmarg,simlea,simleasize,simlesh;
-    int simlemil, simstem, simint,simesc,simse,simlomold,simseedsize,simseedis,simmy,simleafmalf,simsh;
-    int similaridadeglobalparcial;
+    int simlemil, simstem, simint,simesc,simse,simlomold,simseedsize,simseedis,simmy,simleafmalf,simsh,similaridadeglobalparcial = 0;
+    int pesodiv = 0;
+    int peso[] = new int[27];
     double damagedArea[] = new double[309];
     double cropHist[] = new double[309];
     double severity[] = new double[309];
@@ -31,7 +32,7 @@ public class RBCsoja {
     double lodging[] = new double[309];
     double stemcanker[] = new double[309];
     double root[] = new double[309];
-    double similaridadeGlobal[]=new double[309]; 
+    int simparc[] = new int[27]; 
     
     int i = 0;
             
@@ -39,34 +40,67 @@ public class RBCsoja {
     SimilaridadeGlobal global = new SimilaridadeGlobal();
         
         //Atrib que nao precisam ser calc similaridades
-        simcan=local.SimilaridadeLocalCankerLesion(DadosCasoProblema.canckerlesion)*7;
-        simext=local.SimilaridadeLocalExternalDecay(DadosCasoProblema.externaldecay)*7;
-        simfrub=local.SimilaridadeLocalFruitingBodies(DadosCasoProblema.fruitingbodies)*7;
-        simfrus=local.SimilaridadeLocalFruitSpots(DadosCasoProblema.fruitspots)*8;
-        simfrup=local.SimilaridadeLocalFruitPods(DadosCasoProblema.fruitpods)*8;
-        simhail=local.SimilaridadeLocalHail(DadosCasoProblema.hail)*3;
-        simplasta=local.SimilaridadeLocalPlantStand(DadosCasoProblema.plantstand)*5;
-        simpre=local.SimilaridadeLocalPrecip(DadosCasoProblema.precip)*6;
-        simtem=local.SimilaridadeLocalTemp(DadosCasoProblema.temp)*4;
-        simsetmt=local.SimilaridadeLocalSeedTmt(DadosCasoProblema.seedtmt)*1;
-        simplagro=local.SimilaridadeLocalPlantGrowth(DadosCasoProblema.plantgrowth)*8;
-        simhalo=local.SimilaridadeLocalLeafSpotHalo(DadosCasoProblema.leafspothalo)*6;
-        simmarg=local.SimilaridadeLocalLeafSpotMargin(DadosCasoProblema.leafsspotmarg)*7;
-        simlea=local.SimilaridadeLocalLeaves(DadosCasoProblema.leaves)*8;
-        simleasize=local.SimilaridadeLocalLeafSpotSize(DadosCasoProblema.leafspotsize)*7;
-        simlesh=local.SimilaridadeLocalLeafShred(DadosCasoProblema.leafshred)*7;
-        simlemil=local.SimilaridadeLocalLeafMild(DadosCasoProblema.leafmild)*8;
-        simstem=local.SimilaridadeLocalStem(DadosCasoProblema.stem)*8;
-        simint=local.SimilaridadeLocalIntDiscolor(DadosCasoProblema.intdiscolor)*8;
-        simesc=local.SimilaridadeLocalSclerotia(DadosCasoProblema.sclerotia)*8;
-        simse=local.SimilaridadeLocalSeed(DadosCasoProblema.seed)*7;
-        simlomold=local.SimilaridadeLocalMoldGrowth(DadosCasoProblema.moldgrowth)*8;
-        simseedis=local.SimilaridadeLocalSeedDis(DadosCasoProblema.seeddis)*7;
-        simsh= local.SimilaridadeLocalShriveling(DadosCasoProblema.shriveling)*8;
-        simseedsize=local.SimilaridadeLocalSeedSize(DadosCasoProblema.seedsize)*8;
-        simmy=local.SimilaridadeLocalMycelium(DadosCasoProblema.mycelium)*8;
-        simleafmalf=local.SimilaridadeLocalLeafMalf(DadosCasoProblema.leafmalf)*7;
+        peso[0] = 7;
+        simparc[0]=local.SimilaridadeLocalCankerLesion(DadosCasoProblema.canckerlesion);//simcan
+        peso[1] = 7;
+        simparc[1]=local.SimilaridadeLocalExternalDecay(DadosCasoProblema.externaldecay);//simext
+        peso[2] = 7;
+        simparc[2]=local.SimilaridadeLocalFruitingBodies(DadosCasoProblema.fruitingbodies);//simfrub
+        peso[3] = 8;
+        simparc[3]=local.SimilaridadeLocalFruitSpots(DadosCasoProblema.fruitspots);//simfrus
+        peso[4] = 8;
+        simparc[4]=local.SimilaridadeLocalFruitPods(DadosCasoProblema.fruitpods);
+        peso[5] = 3;
+        simparc[5]=local.SimilaridadeLocalHail(DadosCasoProblema.hail);
+        peso[6] = 5;
+        simparc[6]=local.SimilaridadeLocalPlantStand(DadosCasoProblema.plantstand);
+        peso[7] = 6;
+        simparc[7]=local.SimilaridadeLocalPrecip(DadosCasoProblema.precip);
+        peso[8] = 4;
+        simparc[8]=local.SimilaridadeLocalTemp(DadosCasoProblema.temp);
+        peso[9] = 1;
+        simparc[9]=local.SimilaridadeLocalSeedTmt(DadosCasoProblema.seedtmt);
+        peso[10] = 8;
+        simparc[10]=local.SimilaridadeLocalPlantGrowth(DadosCasoProblema.plantgrowth);
+        peso[11] = 6;
+        simparc[11]=local.SimilaridadeLocalLeafSpotHalo(DadosCasoProblema.leafspothalo);
+        peso[12] = 7;
+        simparc[12]=local.SimilaridadeLocalLeafSpotMargin(DadosCasoProblema.leafsspotmarg);
+        peso[13] = 8;
+        simparc[13]=local.SimilaridadeLocalLeaves(DadosCasoProblema.leaves);
+        peso[14] = 7;
+        simparc[14]=local.SimilaridadeLocalLeafSpotSize(DadosCasoProblema.leafspotsize);
+        peso[15] = 7;
+        simparc[15]=local.SimilaridadeLocalLeafShred(DadosCasoProblema.leafshred);
+        peso[16] = 8;
+        simparc[16]=local.SimilaridadeLocalLeafMild(DadosCasoProblema.leafmild);
+        peso[17] = 8;
+        simparc[17]=local.SimilaridadeLocalStem(DadosCasoProblema.stem);
+        peso[18] = 8;
+        simparc[18]=local.SimilaridadeLocalIntDiscolor(DadosCasoProblema.intdiscolor);
+        peso[19] = 8;
+        simparc[19]=local.SimilaridadeLocalSclerotia(DadosCasoProblema.sclerotia);
+        peso[20] = 7;
+        simparc[20]=local.SimilaridadeLocalSeed(DadosCasoProblema.seed);
+        peso[21] = 8;
+        simparc[21]=local.SimilaridadeLocalMoldGrowth(DadosCasoProblema.moldgrowth);
+        peso[22] = 7;
+        simparc[22]=local.SimilaridadeLocalSeedDis(DadosCasoProblema.seeddis);
+        peso[23] = 8;
+        simparc[23]= local.SimilaridadeLocalShriveling(DadosCasoProblema.shriveling);
+        peso[24] = 8;
+        simparc[24]=local.SimilaridadeLocalSeedSize(DadosCasoProblema.seedsize);
+        peso[25] = 8;
+        simparc[25]=local.SimilaridadeLocalMycelium(DadosCasoProblema.mycelium);
+        peso[26] = 7;
+        simparc[26]=local.SimilaridadeLocalLeafMalf(DadosCasoProblema.leafmalf);
         
+        for(int j =0;j<27;j++){
+            if(simparc[j] >= 0) similaridadeglobalparcial += simparc[j] * peso[j] ;
+            pesodiv += peso[j]; 
+            
+        }
+        /*System.out.println("parc"+similaridadeglobalparcial);
         similaridadeglobalparcial=simleafmalf+simmy+simseedsize+simsh+simseedis+simlomold+simse+simesc+simint+simstem+simlemil+simlesh+simleasize+simlea+simmarg+simhalo+simplagro+simsetmt+simtem+simpre+simplasta+simhail+simfrub+simfrup+simfrus+simcan+simext;
         System.out.println("simcan =" + simcan);
         System.out.println("simext =" + simext);
@@ -93,7 +127,7 @@ public class RBCsoja {
         System.out.println("simseedis =" + simseedis);
         System.out.println("simsh =" + simsh);
         System.out.println("simmy =" + simmy);
-        System.out.println("simleafmalf =" + simleafmalf);
+        System.out.println("simleafmalf =" + simleafmalf);*/
        
         
         try{
@@ -111,8 +145,8 @@ public class RBCsoja {
                 lodging[i]=local.SimilaridadeLocalLodiging(DadosCasoProblema.lodgi, valoresEntreVirgulas[19]);
                 stemcanker[i]=local.SimilaridadeLocalStemCanker(DadosCasoProblema.stemcancker, valoresEntreVirgulas[34]);
                 root[i]=local.SimilaridadeLocalRoots(DadosCasoProblema.roots, valoresEntreVirgulas[25]);
-                similaridadeGlobal[i]=global.SimilaridadeGlobal(similaridadeglobalparcial, damagedArea[i], cropHist[i], severity[i], germination[i], lodging[i], stemcanker[i],root[i]);
-                //System.out.println("similaridadeGlobal = "+ similaridadeGlobal[i]);
+                DadosCasoProblema.global[i]=global.SimilaridadeGlobal(similaridadeglobalparcial, damagedArea[i], cropHist[i], severity[i], germination[i], lodging[i], stemcanker[i],root[i],pesodiv);
+                System.out.println("similaridadeGlobal "+ i + "= "+ DadosCasoProblema.global[i] +"  Doença = "+valoresEntreVirgulas[36]);
                 i++;
             }
         

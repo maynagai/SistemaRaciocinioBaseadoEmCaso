@@ -20,41 +20,41 @@ public class Tela3 extends javax.swing.JFrame {
      */
     public Tela3() {
         initComponents();
-        textArea1.setText("Area Damaged = "+DadosCasoProblema.areadamaged +"\n"
-                +"Canker Lesion = "+DadosCasoProblema.canckerlesion + "\n"
-                +"Crop-Hist = "+DadosCasoProblema.croohist+"\n"
-                +"Data = "+ DadosCasoProblema.data+"\n"
-                +"External Decay = "+DadosCasoProblema.externaldecay+"\n"
-                +"Fruiting Bodies = "+DadosCasoProblema.fruitingbodies+"\n"
-                +"Fruiting Pods = "+DadosCasoProblema.fruitpods+"\n"
-                +"Fruiting Spots = "+DadosCasoProblema.fruitspots+"\n"
-                +"Germination = "+DadosCasoProblema.germination+"\n"
-                +"Hail = "+DadosCasoProblema.hail+"\n"
-                +"Int-Discolor = "+DadosCasoProblema.intdiscolor+"\n"
-                +"Leaf-Malf = "+DadosCasoProblema.leafmalf+"\n"
-                +"Leaf-Mild = "+DadosCasoProblema.leafmild+"\n"
-                +"Leaf-Shread = "+DadosCasoProblema.leafshred+"\n"
-                +"Leafspot-Halo = "+DadosCasoProblema.leafspothalo+"\n"
-                +"Leafspot-Size = "+DadosCasoProblema.leafspotsize+"\n"
-                +"Leafspot-Margin = "+DadosCasoProblema.leafsspotmarg+"\n"
-                +"Leaves = "+DadosCasoProblema.leaves+"\n"
-                +"Lodging = "+DadosCasoProblema.lodgi+"\n"
-                +"Mold Growth = "+DadosCasoProblema.moldgrowth+"\n"
-                +"Mycelium = "+DadosCasoProblema.mycelium+"\n"
-                +"Plant Growth = "+DadosCasoProblema.plantgrowth+"\n"
-                +"Plant-Stand = "+DadosCasoProblema.plantstand+"\n"
-                +"Precip = "+DadosCasoProblema.precip+"\n"
-                +"Roots = "+DadosCasoProblema.roots+"\n"
-                +"Sclerotia = "+DadosCasoProblema.sclerotia+"\n"
-                +"Seed = "+DadosCasoProblema.seed+"\n"
-                +"Seed Discolor = "+DadosCasoProblema.seeddis+"\n"
-                +"Seed Size = "+DadosCasoProblema.seedsize+"\n"
-                +"Seed-TMT = "+DadosCasoProblema.seedtmt+"\n"
-                +"Severity = "+DadosCasoProblema.severity+"\n"
-                +"Shriveling = "+DadosCasoProblema.shriveling+"\n"
-                +"Stem = "+DadosCasoProblema.stem+"\n"
-                +"Stem Canker = "+DadosCasoProblema.stemcancker+"\n"
-                +"Temp = "+DadosCasoProblema.temp);
+        textArea1.setText("Area Damaged = "+Dados.areadamaged +"\n"
+                +"Canker Lesion = "+Dados.canckerlesion + "\n"
+                +"Crop-Hist = "+Dados.croohist+"\n"
+                +"Data = "+ Dados.data+"\n"
+                +"External Decay = "+Dados.externaldecay+"\n"
+                +"Fruiting Bodies = "+Dados.fruitingbodies+"\n"
+                +"Fruiting Pods = "+Dados.fruitpods+"\n"
+                +"Fruiting Spots = "+Dados.fruitspots+"\n"
+                +"Germination = "+Dados.germination+"\n"
+                +"Hail = "+Dados.hail+"\n"
+                +"Int-Discolor = "+Dados.intdiscolor+"\n"
+                +"Leaf-Malf = "+Dados.leafmalf+"\n"
+                +"Leaf-Mild = "+Dados.leafmild+"\n"
+                +"Leaf-Shread = "+Dados.leafshred+"\n"
+                +"Leafspot-Halo = "+Dados.leafspothalo+"\n"
+                +"Leafspot-Size = "+Dados.leafspotsize+"\n"
+                +"Leafspot-Margin = "+Dados.leafsspotmarg+"\n"
+                +"Leaves = "+Dados.leaves+"\n"
+                +"Lodging = "+Dados.lodgi+"\n"
+                +"Mold Growth = "+Dados.moldgrowth+"\n"
+                +"Mycelium = "+Dados.mycelium+"\n"
+                +"Plant Growth = "+Dados.plantgrowth+"\n"
+                +"Plant-Stand = "+Dados.plantstand+"\n"
+                +"Precip = "+Dados.precip+"\n"
+                +"Roots = "+Dados.roots+"\n"
+                +"Sclerotia = "+Dados.sclerotia+"\n"
+                +"Seed = "+Dados.seed+"\n"
+                +"Seed Discolor = "+Dados.seeddis+"\n"
+                +"Seed Size = "+Dados.seedsize+"\n"
+                +"Seed-TMT = "+Dados.seedtmt+"\n"
+                +"Severity = "+Dados.severity+"\n"
+                +"Shriveling = "+Dados.shriveling+"\n"
+                +"Stem = "+Dados.stem+"\n"
+                +"Stem Canker = "+Dados.stemcancker+"\n"
+                +"Temp = "+Dados.temp);
     }
 
     /**
@@ -129,16 +129,16 @@ public class Tela3 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(139, 139, 139))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(226, 226, 226))
             .addGroup(layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(textArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(164, 164, 164)
                 .addComponent(textArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(62, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(228, 228, 228))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,7 +174,7 @@ public class Tela3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: //Botao q realizará retenção
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

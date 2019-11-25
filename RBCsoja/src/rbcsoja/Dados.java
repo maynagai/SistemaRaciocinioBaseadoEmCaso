@@ -10,8 +10,8 @@ package rbcsoja;
  * @author mayla
  */
 public class Dados {
-
     Tela tela1 = new Tela();
+    
     static String leaves;
     static String data;
     static String plantstand;
@@ -47,5 +47,14 @@ public class Dados {
     static String mycelium;
     static String leafmalf;
     static String seedsize;
+    static Integer qtd;
+    static Integer aux;
+    static Integer[] idProblema = new Integer[400];
+    static double calcMinima;
+    
+    
+    
+    static double[] global = new double[400]; 
+    static String[] doenca = new String[400]; 
 
 }

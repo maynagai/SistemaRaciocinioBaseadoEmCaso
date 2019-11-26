@@ -38,7 +38,13 @@ public class SimilaridadeLocal  {
         return valorDamaged;
     }
     
-    //public int SimilaridadeLocalDate(String casoProblema, String[] casoBase){}
+    public int SimilaridadeLocalDate(String casoProblema, String casoBase){
+        int valorData = 0;
+        
+        
+        
+        return valorData;
+    }
     
     public double SimilaridadeLocalCropHist(String casoProblema, String casoBase){      
         String diff = "diff-1st-year";

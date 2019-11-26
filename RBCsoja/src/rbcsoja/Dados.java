@@ -49,6 +49,7 @@ public class Dados {
     static String seedsize;
     static Integer qtd;
     static Integer aux;
+    static Integer aux1;
     static Integer[] idProblema = new Integer[400];
     static double calcMinima;
     
@@ -56,5 +57,42 @@ public class Dados {
     
     static double[] global = new double[400]; 
     static String[] doenca = new String[400]; 
+    //transformar em Vetor
+    static String[] leavesVetor = new String[400];
+    static String[] dataVetor= new String[400];
+    static String[] plantstandVetor= new String[400];
+    static String[] precipVetor= new String[400];
+    static String[] tempVetor= new String[400];
+    static String[] hailVetor= new String[400];
+    static String[] seedtmtVetor= new String[400];
+    static String[] plantgrowthVetor= new String[400];
+    static String[] leafspothaloVetor= new String[400];
+    static String[] leafsspotmargVetor= new String[400];
+    static String[] leafspotsizeVetor= new String[400];
+    static String[] leafshredVetor= new String[400];
+    static String[] leafmildVetor= new String[400];
+    static String[] stemVetor= new String[400];
+    static String[] canckerlesionVetor= new String[400];
+    static String[] fruitingbodiesVetor= new String[400];
+    static String[] externaldecayVetor= new String[400];
+    static String[] intdiscolorVetor= new String[400];
+    static String[] sclerotiaVetor= new String[400];
+    static String[] fruitpodsVetor= new String[400];
+    static String[] fruitspotsVetor= new String[400];
+    static String[] seedVetor= new String[400];
+    static String[] moldgrowthVetor= new String[400];
+    static String[] seeddisVetor= new String[400];
+    static String[] shrivelingVetor= new String[400];
+    static String[] croohistVetor= new String[400];
+    static String[] areadamagedVetor= new String[400];
+    static String[] severityVetor= new String[400];
+    static String[] germinationVetor= new String[400];
+    static String[] lodgiVetor= new String[400];
+    static String[] stemcanckerVetor= new String[400];
+    static String[] rootsVetor= new String[400];
+    static String[] myceliumVetor= new String[400];
+    static String[] leafmalfVetor= new String[400];
+    static String[] seedsizeVetor= new String[400];
+    static String[] caso= new String[400];
 
 }

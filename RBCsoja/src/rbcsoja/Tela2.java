@@ -65,7 +65,7 @@ public class Tela2 extends javax.swing.JFrame {
             i++;
            }
         }
-        for(int k=0;k<Dados.qtd;k++) System.out.println(Dados.idProblema[k]);      
+        for(int k=0;k<Dados.qtd;k++) System.out.println(Dados.idProblema[k]+" "+k);      
         jList1.setModel(lista);
         
     }
@@ -643,6 +643,7 @@ public class Tela2 extends javax.swing.JFrame {
 
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
             // TODO add your handling code here:
+            
             Dados.aux = jList1.getSelectedIndex();
           
     }//GEN-LAST:event_jList1MouseClicked

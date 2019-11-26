@@ -6,6 +6,19 @@
 package rbcsoja;
 
 import java.awt.TextArea;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -20,41 +33,88 @@ public class Tela3 extends javax.swing.JFrame {
      */
     public Tela3() {
         initComponents();
-        textArea1.setText("Area Damaged = "+Dados.areadamaged +"\n"
-                +"Canker Lesion = "+Dados.canckerlesion + "\n"
-                +"Crop-Hist = "+Dados.croohist+"\n"
-                +"Data = "+ Dados.data+"\n"
-                +"External Decay = "+Dados.externaldecay+"\n"
-                +"Fruiting Bodies = "+Dados.fruitingbodies+"\n"
-                +"Fruiting Pods = "+Dados.fruitpods+"\n"
-                +"Fruiting Spots = "+Dados.fruitspots+"\n"
-                +"Germination = "+Dados.germination+"\n"
-                +"Hail = "+Dados.hail+"\n"
-                +"Int-Discolor = "+Dados.intdiscolor+"\n"
-                +"Leaf-Malf = "+Dados.leafmalf+"\n"
-                +"Leaf-Mild = "+Dados.leafmild+"\n"
-                +"Leaf-Shread = "+Dados.leafshred+"\n"
-                +"Leafspot-Halo = "+Dados.leafspothalo+"\n"
-                +"Leafspot-Size = "+Dados.leafspotsize+"\n"
-                +"Leafspot-Margin = "+Dados.leafsspotmarg+"\n"
-                +"Leaves = "+Dados.leaves+"\n"
-                +"Lodging = "+Dados.lodgi+"\n"
-                +"Mold Growth = "+Dados.moldgrowth+"\n"
-                +"Mycelium = "+Dados.mycelium+"\n"
-                +"Plant Growth = "+Dados.plantgrowth+"\n"
-                +"Plant-Stand = "+Dados.plantstand+"\n"
-                +"Precip = "+Dados.precip+"\n"
-                +"Roots = "+Dados.roots+"\n"
-                +"Sclerotia = "+Dados.sclerotia+"\n"
-                +"Seed = "+Dados.seed+"\n"
-                +"Seed Discolor = "+Dados.seeddis+"\n"
-                +"Seed Size = "+Dados.seedsize+"\n"
-                +"Seed-TMT = "+Dados.seedtmt+"\n"
-                +"Severity = "+Dados.severity+"\n"
-                +"Shriveling = "+Dados.shriveling+"\n"
-                +"Stem = "+Dados.stem+"\n"
-                +"Stem Canker = "+Dados.stemcancker+"\n"
-                +"Temp = "+Dados.temp);
+        textArea1.setText("Area Damaged = " + Dados.areadamaged + "\n"
+                + "Canker Lesion = " + Dados.canckerlesion + "\n"
+                + "Crop-Hist = " + Dados.croohist + "\n"
+                + "Data = " + Dados.data + "\n"
+                + "External Decay = " + Dados.externaldecay + "\n"
+                + "Fruiting Bodies = " + Dados.fruitingbodies + "\n"
+                + "Fruiting Pods = " + Dados.fruitpods + "\n"
+                + "Fruiting Spots = " + Dados.fruitspots + "\n"
+                + "Germination = " + Dados.germination + "\n"
+                + "Hail = " + Dados.hail + "\n"
+                + "Int-Discolor = " + Dados.intdiscolor + "\n"
+                + "Leaf-Malf = " + Dados.leafmalf + "\n"
+                + "Leaf-Mild = " + Dados.leafmild + "\n"
+                + "Leaf-Shread = " + Dados.leafshred + "\n"
+                + "Leafspot-Halo = " + Dados.leafspothalo + "\n"
+                + "Leafspot-Size = " + Dados.leafspotsize + "\n"
+                + "Leafspot-Margin = " + Dados.leafsspotmarg + "\n"
+                + "Leaves = " + Dados.leaves + "\n"
+                + "Lodging = " + Dados.lodgi + "\n"
+                + "Mold Growth = " + Dados.moldgrowth + "\n"
+                + "Mycelium = " + Dados.mycelium + "\n"
+                + "Plant Growth = " + Dados.plantgrowth + "\n"
+                + "Plant-Stand = " + Dados.plantstand + "\n"
+                + "Precip = " + Dados.precip + "\n"
+                + "Roots = " + Dados.roots + "\n"
+                + "Sclerotia = " + Dados.sclerotia + "\n"
+                + "Seed = " + Dados.seed + "\n"
+                + "Seed Discolor = " + Dados.seeddis + "\n"
+                + "Seed Size = " + Dados.seedsize + "\n"
+                + "Seed-TMT = " + Dados.seedtmt + "\n"
+                + "Severity = " + Dados.severity + "\n"
+                + "Shriveling = " + Dados.shriveling + "\n"
+                + "Stem = " + Dados.stem + "\n"
+                + "Stem Canker = " + Dados.stemcancker + "\n"
+                + "Temp = " + Dados.temp);
+
+       int casoProbIndex = Dados.aux;
+         //id do caso base a ser mostrado
+        for (int i = 0; i < Dados.idProblema.length; i++) {
+            if (i == casoProbIndex) {
+                Dados.aux1 = Dados.idProblema[i] - 1;
+            }
+        }
+        System.out.println("aux = " + Dados.aux1);
+        textArea2.setText("Area Damaged = " + Dados.areadamagedVetor[Dados.aux1] + "\n"
+                + "Canker Lesion = " + Dados.canckerlesionVetor[Dados.aux1] + "\n"
+                + "Crop-Hist = " + Dados.croohistVetor[Dados.aux1] + "\n"
+                + "Data = " + Dados.dataVetor[Dados.aux1] + "\n"
+                + "External Decay = " + Dados.externaldecayVetor[Dados.aux1] + "\n"
+                + "Fruiting Bodies = " + Dados.fruitingbodiesVetor[Dados.aux1] + "\n"
+                + "Fruiting Pods = " + Dados.fruitpodsVetor[Dados.aux1] + "\n"
+                + "Fruiting Spots = " + Dados.fruitspotsVetor[Dados.aux1] + "\n"
+                + "Germination = " + Dados.germinationVetor[Dados.aux1] + "\n"
+                + "Hail = " + Dados.hailVetor[Dados.aux1] + "\n"
+                + "Int-Discolor = " + Dados.intdiscolorVetor[Dados.aux1] + "\n"
+                + "Leaf-Malf = " + Dados.leafmalfVetor[Dados.aux1] + "\n"
+                + "Leaf-Mild = " + Dados.leafmildVetor[Dados.aux1] + "\n"
+                + "Leaf-Shread = " + Dados.leafshredVetor[Dados.aux1] + "\n"
+                + "Leafspot-Halo = " + Dados.leafspothaloVetor[Dados.aux1] + "\n"
+                + "Leafspot-Size = " + Dados.leafspotsizeVetor[Dados.aux1] + "\n"
+                + "Leafspot-Margin = " + Dados.leafsspotmargVetor[Dados.aux1] + "\n"
+                + "Leaves = " + Dados.leavesVetor[Dados.aux1] + "\n"
+                + "Lodging = " + Dados.lodgiVetor[Dados.aux1] + "\n"
+                + "Mold Growth = " + Dados.moldgrowthVetor[Dados.aux1] + "\n"
+                + "Mycelium = " + Dados.myceliumVetor[Dados.aux1] + "\n"
+                + "Plant Growth = " + Dados.plantgrowthVetor[Dados.aux1] + "\n"
+                + "Plant-Stand = " + Dados.plantstandVetor[Dados.aux1] + "\n"
+                + "Precip = " + Dados.precipVetor[Dados.aux1] + "\n"
+                + "Roots = " + Dados.rootsVetor[Dados.aux1] + "\n"
+                + "Sclerotia = " + Dados.sclerotiaVetor[Dados.aux1] + "\n"
+                + "Seed = " + Dados.seedVetor[Dados.aux1] + "\n"
+                + "Seed Discolor = " + Dados.seeddisVetor[Dados.aux1] + "\n"
+                + "Seed Size = " + Dados.seedsizeVetor[Dados.aux1] + "\n"
+                + "Seed-TMT = " + Dados.seedtmtVetor[Dados.aux1] + "\n"
+                + "Severity = " + Dados.severityVetor[Dados.aux1] + "\n"
+                + "Shriveling = " + Dados.shrivelingVetor[Dados.aux1] + "\n"
+                + "Stem = " + Dados.stemVetor[Dados.aux1] + "\n"
+                + "Stem Canker = " + Dados.stemcanckerVetor[Dados.aux1] + "\n"
+                + "Temp = " + Dados.tempVetor[Dados.aux1]);
+
+        jLabel4.setText(Dados.doenca[Dados.aux1]);
+
     }
 
     /**
@@ -168,13 +228,103 @@ public class Tela3 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-      Tela2 tela2 = new Tela2();
-      tela2.show();
-      this.dispose();
+        Tela2 tela2 = new Tela2();
+        tela2.show();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here: //Botao q realizará retenção
+        File arquivoCSV = new File("/home/mayla/NetBeansProjects/RBCsoja/src/rbcsoja/casoBase");
+        BufferedWriter bw = null;
+        Integer aux1 = Dados.qtd + 1;
+             try {
+            bw = new BufferedWriter(new FileWriter(arquivoCSV, true));
+            
+           bw.write(aux1.toString());
+           bw.write(',');
+            bw.write(Dados.areadamaged);
+            bw.write(',');
+            bw.write(Dados.canckerlesion);
+            bw.write(',');
+            bw.write(Dados.croohist);
+            bw.write(',');
+            bw.write(Dados.data);
+           bw.write(',');
+            bw.write(Dados.externaldecay);
+           bw.write(',');
+            bw.write(Dados.fruitspots);
+           bw.write(',');
+            bw.write(Dados.fruitingbodies);
+           bw.write(',');
+            bw.write(Dados.fruitpods);
+           bw.write(',');
+            bw.write(Dados.germination);
+           bw.write(',');
+            bw.write(Dados.hail);
+           bw.write(',');
+            bw.write(Dados.intdiscolor);
+           bw.write(',');
+            bw.write(Dados.leafmalf);
+           bw.write(',');
+            bw.write(Dados.leafmild);
+           bw.write(',');
+            bw.write(Dados.leafshred);
+           bw.write(',');
+            bw.write(Dados.leafspothalo);
+           bw.write(',');
+            bw.write(Dados.leafspotsize);
+           bw.write(',');
+            bw.write(Dados.leafsspotmarg);
+           bw.write(',');
+            bw.write(Dados.leaves);
+           bw.write(',');
+            bw.write(Dados.lodgi);
+           bw.write(',');
+            bw.write(Dados.moldgrowth);
+           bw.write(',');
+            bw.write(Dados.mycelium);
+           bw.write(',');
+            bw.write(Dados.plantgrowth);
+           bw.write(',');
+            bw.write(Dados.plantstand);
+           bw.write(',');
+            bw.write(Dados.precip);
+           bw.write(',');
+            bw.write(Dados.roots);
+           bw.write(',');
+            bw.write(Dados.sclerotia);
+           bw.write(',');
+            bw.write(Dados.seed);
+           bw.write(',');
+            bw.write(Dados.seeddis);
+           bw.write(',');
+            bw.write(Dados.seedsize);
+           bw.write(',');
+            bw.write(Dados.seedtmt);
+           bw.write(',');
+            bw.write(Dados.severity);
+           bw.write(',');
+            bw.write(Dados.shriveling);
+           bw.write(',');
+            bw.write(Dados.stem);
+           bw.write(',');
+            bw.write(Dados.stemcancker);
+            bw.write(',');
+            bw.write(Dados.temp);
+           bw.write(',');
+            bw.write(Dados.doenca[Dados.aux1]);
+            bw.newLine();
+            bw.flush();
+            bw.close();
+            
+        } catch (IOException ex) {
+            //Logger.getLogger(Tela3.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("erro escrita arquivo");
+        }
+        //https://respostas.guj.com.br/6063-escrever-no-fim-do-arquivo-sem-sobrescrever
+        
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -230,6 +380,4 @@ public class Tela3 extends javax.swing.JFrame {
     private java.awt.TextArea textArea2;
     // End of variables declaration//GEN-END:variables
 
-    
- 
 }
